@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OVER BOT - Sua loja de itens exclusivos e acesso VIP via Telegram. Encontre conteúdo raro e planos de grupo premium! Segurança, velocidade e comunidade." />
+    <meta name="keywords" content="OVER BOT, Telegram, itens exclusivos, acesso VIP, comunidade premium, conteúdo raro, vantagens digitais, grupo exclusivo, ApelaWar, bots Telegram, compra segura, entrega automática" />
+    <meta name="author" content="ApelaWar">
+    <meta property="og:title" content="OVER BOT - Venda de Itens Exclusivos e Acesso VIP" />
+    <meta property="og:description" content="Sua porta de entrada para itens digitais exclusivos e uma comunidade VIP premium no Telegram. Descubra o que você estava perdendo!" />
+    <meta property="og:image" content="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" />
+    <meta property="og:url" content="https://seusiteoverbot.com.br" />
+    <meta property="og:type" content="website" />
+
+    <title>OVER BOT - Seu Passaporte para o Digital Exclusivo</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2300FF88' d='M11 15H9V9h2v6zm6-6h-2v6h2V9zm-3 9H8c-1.1 0-2 .9-2 2v2h12v-2c0-1.1-.9-2-2-2zM4 6c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6z'/%3E%3C/svg%3E" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Segoe UI', 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0F0F0F;
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            font-size: 16px; /* Base font size */
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #1A1A1A, #0F0F0F);
+            padding: 2.5rem 1rem; /* Reduced padding for more compact look */
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,255,136,0.08) 0%, rgba(0,191,255,0.08) 100%);
+            animation: pulseBg 10s infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes pulseBg {
+            0% { transform: scale(1); opacity: 0.9; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+
+        header h1 {
+            font-size: 2.8em; /* Adjusted for better scale */
+            color: #E8E8E8;
+            margin-bottom: 1rem; /* Reduced margin */
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.9), 0 0 25px rgba(0, 191, 255, 0.7);
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        header h1 svg {
+            width: 2.5rem; /* Adjusted for better scale */
+            height: 2.5rem; /* Adjusted for better scale */
+            fill: #E8E8E8;
+            filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.8));
+        }
+
+        header p {
+            font-size: 1.1em; /* Adjusted for better scale */
+            color: #C9C9C9;
+            max-width: 800px; /* Slightly reduced max-width */
+            margin: 0 auto 2rem; /* Adjusted margin */
+            opacity: 1;
+            position: relative;
+            z-index: 1;
+            font-weight: 400;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 1.5rem; /* Adjusted gap */
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #00FF88;
+            color: #101010;
+            padding: 0.8rem 1.8rem; /* Adjusted padding */
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em; /* Adjusted for better scale */
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.7);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #00CC6A;
+            transform: translateY(-0.5rem) scale(1.03);
+            box-shadow: 0 15px 35px rgba(0, 255, 136, 1);
+        }
+
+        /* Main Content Area */
+        main {
+            padding: 3rem 1rem; /* Adjusted padding */
+            max-width: 1100px; /* Slightly reduced max-width */
+            margin: auto;
+            flex-grow: 1;
+        }
+
+        /* General Section Styling */
+        section {
+            margin-bottom: 3rem; /* Adjusted margin */
+            background-color: #1A1A1A;
+            padding: 2rem; /* Adjusted padding */
+            border-radius: 1rem; /* Adjusted border-radius */
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid #282828;
+        }
+
+        h2 {
+            color: #00FF88;
+            font-size: 2em; /* Adjusted for better scale */
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #00FF88; /* Reduced border thickness */
+            padding-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+
+        h2 svg {
+            width: 2rem;
+            height: 2rem;
+            fill: currentColor;
+        }
+
+        p, li {
+            font-size: 1em; /* Base font size */
+            margin-bottom: 1rem; /* Adjusted margin */
+            color: #C9C9C9;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.8rem; /* Adjusted margin */
+            padding-left: 2rem; /* Adjusted padding */
+            position: relative;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #00FF88;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.3em;
+            margin-left: -1.3em;
+            position: absolute;
+            left: 0;
+            font-size: 1.4em;
+        }
+
+        /* Bot Links Section */
+        .bot-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background-color: #00FF88;
+            color: #0A0A0A;
+            padding: 1rem 1.5rem; /* Adjusted padding */
+            margin: 1.2rem 0;
+            border-radius: 0.8rem; /* Adjusted border-radius */
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em; /* Adjusted for better scale */
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.7);
+            border: 2px solid #00FF88;
+        }
+
+        .bot-links a:hover {
+            background-color: #00CC6A;
+            transform: translateY(-0.6rem) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 255, 136, 0.9);
+            border-color: #00FF88;
+        }
+
+        .bot-links a svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            fill: #0A0A0A;
+        }
+
+        /* Destaques Section */
+        .destaques-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min-width */
+            gap: 1.5rem; /* Adjusted gap */
+            margin-top: 2rem;
+        }
+
+        .destaque-item {
+            background-color: #1A1A1A;
+            padding: 1.5rem; /* Adjusted padding */
+            border-radius: 0.8rem; /* Adjusted border-radius */
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+            transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #282828;
+        }
+
+        .destaque-item:hover {
+            transform: translateY(-0.7rem);
+            background-color: #262626;
+            border-color: #00FF88;
+            box-shadow: 0 10px 25px rgba(0, 255, 136, 0.7);
+        }
+
+        .destaque-item h3 {
+            color: #00FF88;
+            font-size: 1.3em; /* Adjusted for better scale */
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        .destaque-item h3 svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: currentColor;
+        }
+
+        .destaque-item p {
+            font-size: 0.95em; /* Adjusted for better scale */
+            color: #C9C9C9;
+        }
+
+        /* Video Demonstracao Section */
+        .video-demonstracao .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background-color: #000;
+            border-radius: 0.8rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            border: 2px solid #00BFFF;
+        }
+
+        .video-demonstracao .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Depoimentos Section */
+        .depoimentos {
+            position: relative;
+        }
+        .depoimentos-counter {
+            background-color: #00FF88;
+            color: #0A0A0A;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            animation: fadeIn 1s ease-out;
+            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.5);
+        }
+        .depoimentos .depoimento-item {
+            background-color: #1A1A1A;
+            padding: 1.5rem; /* Adjusted padding */
+            border-radius: 0.8rem; /* Adjusted border-radius */
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+            border-left: 0.6rem solid #00FF88; /* Adjusted border thickness */
+            transition: background-color 0.3s ease, border-left-color 0.3s ease;
+            position: relative;
+        }
+        .depoimentos .depoimento-item:hover {
+            background-color: #262626;
+            border-left-color: #00BFFF;
+        }
+        .depoimentos .depoimento-item img.avatar {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 0.2rem solid #00BFFF;
+            margin-bottom: 1rem;
+            float: left;
+            margin-right: 1.2rem;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+        }
+        .depoimentos .depoimento-item p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #C9C9C9;
+            overflow: hidden;
+            font-size: 0.95em; /* Adjusted for better scale */
+        }
+
+        .depoimentos .depoimento-item cite {
+            display: block;
+            text-align: right;
+            font-weight: 700;
+            color: #00FF88;
+            margin-top: 0.8rem;
+            font-size: 1em;
+            opacity: 0.95;
+            clear: both;
+        }
+
+        /* Garantia de Satisfação / Pagamentos */
+        .garantia-pagamentos {
+            text-align: center;
+            padding: 2.5rem; /* Adjusted padding */
+            background-color: #1A1A1A;
+            border-radius: 1rem;
+            margin-top: 4rem;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+            border: 1px solid #282828;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .garantia-pagamentos::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(circle, rgba(0,191,255,0.05) 0%, rgba(0,255,136,0.05) 100%);
+            animation: rotateBg 20s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes rotateBg {
+            from { transform: rotate(0deg) scale(1); opacity: 0.8;}
+            to { transform: rotate(360deg) scale(1.05); opacity: 0.9; }
+        }
+
+        .garantia-pagamentos h2 {
+            color: #00BFFF;
+            border-bottom-color: #00BFFF;
+            text-shadow: 0 0 12px rgba(0, 191, 255, 0.5);
+            position: relative;
+            z-index: 1;
+            font-size: 2.2em; /* Adjusted for better scale */
+        }
+
+        .garantia-pagamentos .icon-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 1.5rem auto;
+            max-width: 700px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .garantia-pagamentos .icon-text svg {
+            width: 3.5rem;
+            height: 3.5rem;
+            fill: #00FF88;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.6));
+        }
+        .garantia-pagamentos .icon-text p {
+            font-size: 1.1em; /* Adjusted for better scale */
+            color: #E8E8E8;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+            max-width: 70%;
+        }
+
+        .payment-methods {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .payment-methods .payment-icon {
+            background-color: #0A0A0A;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.6rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+            border: 2px solid #282828;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .payment-methods .payment-icon:hover {
+            transform: translateY(-0.5rem) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 191, 255, 0.6);
+            border-color: #00BFFF;
+        }
+        .payment-methods .payment-icon svg {
+            width: 2.2rem;
+            height: 2.2rem;
+            fill: #fff;
+        }
+        .payment-methods .payment-icon span {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background-color: #1A1A1A;
+            padding: 1.2rem; /* Adjusted padding */
+            border-radius: 0.8rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+            border: 1px solid #282828;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+        .faq-item:hover {
+            background-color: #262626;
+            transform: translateY(-0.3rem);
+            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.7);
+        }
+        .faq-item h3 {
+            color: #00FF88;
+            font-size: 1.2em; /* Adjusted for better scale */
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+            font-weight: 600;
+        }
+        .faq-item h3 svg {
+            width: 1.4rem;
+            height: 1.4rem;
+            fill: currentColor;
+            transition: transform 0.3s ease;
+        }
+        .faq-item h3 svg.rotated {
+            transform: rotate(90deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease-out, opacity 0.6s ease-out;
+            opacity: 0;
+            color: #C9C9C9;
+            padding-top: 0;
+            font-size: 0.95em; /* Adjusted for better scale */
+        }
+        .faq-answer.open {
+            max-height: 15rem; /* Adjusted max-height */
+            opacity: 1;
+            padding-top: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .contact-form label {
+            font-size: 1em; /* Adjusted for better scale */
+            color: #00FF88;
+            font-weight: 600;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem; /* Adjusted padding */
+            border-radius: 0.6rem;
+            border: 2px solid #00FF88;
+            background-color: #101010;
+            color: #fff;
+            font-size: 0.95em; /* Adjusted for better scale */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #00BFFF;
+            box-shadow: 0 0 12px rgba(0, 191, 255, 0.7);
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 7rem; /* Adjusted min-height */
+        }
+        .contact-form button {
+            background-color: #00FF88;
+            color: #0A0A0A;
+            padding: 0.9rem 1.8rem; /* Adjusted padding */
+            border-radius: 50px;
+            border: none;
+            font-weight: 700;
+            font-size: 1em; /* Adjusted for better scale */
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 255, 136, 0.7);
+        }
+        .contact-form button:hover {
+            background-color: #00CC6A;
+            transform: translateY(-0.4rem);
+            box-shadow: 0 10px 25px rgba(0, 255, 136, 0.9);
+        }
+
+        /* Message success/error contact form */
+        #formMessage {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: 700;
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+        #formMessage.visible {
+            opacity: 1;
+        }
+        #formMessage.success {
+            background-color: #00CC6A;
+            color: #0A0A0A;
+        }
+        #formMessage.error {
+            background-color: #FF4D4D;
+            color: #fff;
+        }
+
+        /* Creator Section */
+        .creator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .creator img {
+            width: 10rem; /* Adjusted for better scale */
+            height: 10rem; /* Adjusted for better scale */
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            border: 0.4rem solid #00FF88;
+            box-shadow: 0 0 40px rgba(0, 255, 136, 0.9), 0 0 80px rgba(0, 191, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .creator img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 50px rgba(0, 255, 136, 1), 0 0 100px rgba(0, 191, 255, 0.7);
+        }
+
+        .creator p {
+            text-align: center;
+            max-width: 650px;
+            margin-bottom: 1.5rem;
+            font-size: 1em; /* Base font size */
+            color: #C9C9C9;
+        }
+
+        .creator .social-links-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem; /* Adjusted gap */
+            margin-top: 1.2rem;
+        }
+
+        .creator .social-links-grid a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            color: #00FF88;
+            padding: 0.8rem 1.2rem; /* Adjusted padding */
+            border: 2px solid #00FF88;
+            border-radius: 0.6rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95em; /* Adjusted for better scale */
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .creator .social-links-grid a:hover {
+            background-color: #00FF88;
+            color: #0A0A0A;
+            transform: translateY(-0.4rem);
+            box-shadow: 0 6px 18px rgba(0, 255, 136, 0.8);
+        }
+
+        .creator .social-links-grid a svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            fill: currentColor;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem; /* Adjusted padding */
+            background-color: #151515;
+            font-size: 0.85em; /* Adjusted for better scale */
+            color: #A0A0A0;
+            margin-top: 3rem; /* Adjusted margin */
+            border-top: 3px solid #282828;
+        }
+        footer a {
+            color: #00FF88;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        footer a:hover {
+            text-decoration: underline;
+            color: #00CC6A;
+        }
+
+        .footer-links {
+            margin-top: 1rem; /* Adjusted margin */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem; /* Adjusted gap */
+        }
+
+        /* Chatbot Button */
+        #openChatbotBtn {
+            position: fixed;
+            bottom: 1.5rem; /* Adjusted for better position */
+            right: 1.5rem; /* Adjusted for better position */
+            background-color: #00BFFF; /* Azul vibrante para chat */
+            color: #fff;
+            border-radius: 50%;
+            width: 3.5rem; /* Adjusted for better scale */
+            height: 3.5rem; /* Adjusted for better scale */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em; /* Adjusted for better scale */
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            z-index: 1000; /* Acima de tudo */
+            cursor: pointer;
+            border: none;
+        }
+        #openChatbotBtn:hover {
+            transform: translateY(-0.5rem) scale(1.05);
+            background-color: #00A3D9; /* Tom mais escuro no hover */
+            box-shadow: 0 10px 25px rgba(0, 191, 255, 1);
+        }
+        #openChatbotBtn svg {
+            fill: #fff;
+            width: 1.8rem; /* Adjusted for better scale */
+            height: 1.8rem; /* Adjusted for better scale */
+        }
+
+        /* Chatbot Container */
+        .chatbot-container {
+            display: none; /* Inicia oculto */
+            position: fixed;
+            bottom: 5.5rem; /* Acima do botão */
+            right: 1.5rem; /* Ajuste aqui */
+            width: 20rem; /* Largura padrão ajustada */
+            max-width: 90%; /* Limite para telas menores */
+            height: 28rem; /* Altura padrão ajustada */
+            background-color: #1A1A1A;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            flex-direction: column;
+            overflow: hidden;
+            border: 2px solid #00FF88; /* Borda neon */
+            animation: fadeInScale 0.3s ease-out;
+        }
+
+        .chatbot-header {
+            background-color: #00FF88; /* Cabeçalho verde neon */
+            color: #0A0A0A;
+            padding: 0.8rem; /* Adjusted padding */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 1em; /* Adjusted for better scale */
+            border-top-left-radius: 0.7rem;
+            border-top-right-radius: 0.7rem;
+        }
+        .chatbot-header .close-btn {
+            background: none;
+            border: none;
+            color: #0A0A0A;
+            font-size: 1.4em; /* Adjusted for better scale */
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .chatbot-header .close-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        .chatbot-messages {
+            flex-grow: 1;
+            padding: 0.8rem; /* Adjusted padding */
+            overflow-y: auto;
+            background-color: #0F0F0F; /* Fundo das mensagens */
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem; /* Adjusted gap */
+        }
+
+        .message-bot, .message-user {
+            padding: 0.5rem 0.8rem; /* Adjusted padding */
+            border-radius: 0.6rem; /* Adjusted border-radius */
+            max-width: 85%; /* Adjusted for better scale */
+            word-wrap: break-word;
+            font-size: 0.9em; /* Adjusted for better scale */
+        }
+
+        .message-bot {
+            background-color: #262626; /* Cor da mensagem do bot */
+            align-self: flex-start;
+            color: #E8E8E8;
+            border-bottom-left-radius: 0.1rem;
+        }
+
+        .message-user {
+            background-color: #00BFFF; /* Cor da mensagem do usuário */
+            align-self: flex-end;
+            color: #0A0A0A;
+            border-bottom-right-radius: 0.1rem;
+        }
+
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.3rem 0.8rem; /* Adjusted padding */
+            font-style: italic;
+            color: #888;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .typing-indicator.visible {
+            opacity: 1;
+        }
+        .typing-indicator img {
+            width: 1.5rem; /* Adjusted for better scale */
+            height: 1.5rem; /* Adjusted for better scale */
+            border-radius: 50%;
+            margin-right: 0.3rem;
+        }
+        .typing-dot {
+            width: 0.4rem; /* Adjusted for better scale */
+            height: 0.4rem; /* Adjusted for better scale */
+            background-color: #888;
+            border-radius: 50%;
+            animation: typing 1s infinite;
+            opacity: 0;
+        }
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 80%, 100% { opacity: 0; }
+            40% { opacity: 1; }
+        }
+
+        .chatbot-options {
+            padding: 0.8rem; /* Adjusted padding */
+            background-color: #1A1A1A;
+            border-top: 1px solid #282828;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem; /* Adjusted gap */
+        }
+
+        .chatbot-option-button {
+            background-color: #00CC6A; /* Verde mais suave para opções */
+            color: #0A0A0A;
+            border: none;
+            padding: 0.5rem 0.8rem; /* Adjusted padding */
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            text-align: left;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4);
+            font-size: 0.9em; /* Adjusted for better scale */
+        }
+        .chatbot-option-button:hover {
+            background-color: #00FF88;
+            transform: translateY(-0.1rem);
+        }
+
+        .chatbot-option-button.end-chat {
+            background-color: #FF4D4D; /* Vermelho para encerrar */
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(255, 77, 77, 0.5);
+        }
+        .chatbot-option-button.end-chat:hover {
+            background-color: #CC3D3D;
+        }
+
+        .chatbot-option-button.telegram-link {
+            background-color: #00BFFF; /* Azul Telegram */
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 191, 255, 0.5);
+        }
+        .chatbot-option-button.telegram-link:hover {
+            background-color: #00A3D9;
+        }
+
+        /* Responsividade Chatbot */
+        @media (max-width: 768px) {
+            .chatbot-container {
+                width: 95%;
+                height: 70vh; /* Ocupa mais espaço em telas pequenas */
+                bottom: 5rem; /* Mais acima */
+                right: 2.5%; /* Centralizar */
+                left: 2.5%;
+            }
+            #openChatbotBtn {
+                width: 3.2rem;
+                height: 3.2rem;
+                font-size: 1.8em;
+                bottom: 1.2rem;
+                right: 1.2rem;
+            }
+            #openChatbotBtn svg {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+            .chatbot-messages {
+                font-size: 0.85em; /* Adjusted for better scale */
+            }
+            .message-bot, .message-user {
+                padding: 0.4rem 0.6rem; /* Adjusted padding */
+            }
+            .chatbot-option-button {
+                padding: 0.4rem 0.6rem; /* Adjusted padding */
+                font-size: 0.85em; /* Adjusted for better scale */
+            }
+
+            header {
+                padding: 2rem 1rem;
+            }
+            header h1 {
+                font-size: 2.2em;
+                gap: 0.6rem;
+            }
+            header h1 svg {
+                width: 2rem;
+                height: 2rem;
+            }
+            header p {
+                font-size: 1em;
+                margin-bottom: 1.5rem;
+            }
+            .cta-button {
+                padding: 0.7rem 1.5rem;
+                font-size: 1em;
+            }
+            main {
+                padding: 2rem 1rem;
+            }
+            section {
+                margin-bottom: 2rem;
+                padding: 1.5rem;
+            }
+            h2 {
+                font-size: 1.8em;
+                gap: 0.8rem;
+                padding-bottom: 0.8rem;
+            }
+            h2 svg {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+            .destaques-grid {
+                gap: 1rem;
+            }
+            .destaque-item {
+                padding: 1rem;
+            }
+            .destaque-item h3 {
+                font-size: 1.2em;
+                gap: 0.6rem;
+            }
+            .destaque-item h3 svg {
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+            .bot-links a {
+                padding: 0.8rem 1.2rem;
+                font-size: 1em;
+            }
+            .bot-links a svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            .garantia-pagamentos {
+                padding: 2rem;
+            }
+            .garantia-pagamentos h2 {
+                font-size: 2em;
+            }
+            .garantia-pagamentos .icon-text svg {
+                width: 3rem;
+                height: 3rem;
+            }
+            .garantia-pagamentos .icon-text p {
+                font-size: 1em;
+            }
+            .payment-methods {
+                gap: 1rem;
+            }
+            .payment-methods .payment-icon {
+                padding: 0.7rem 1rem;
+            }
+            .payment-methods .payment-icon svg {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+            .payment-methods .payment-icon span {
+                font-size: 0.95em;
+            }
+            .faq-item {
+                padding: 1rem;
+            }
+            .faq-item h3 {
+                font-size: 1.1em;
+                gap: 0.6rem;
+            }
+            .faq-item h3 svg {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+            .faq-answer {
+                font-size: 0.9em;
+                padding-top: 0.8rem;
+            }
+            .contact-form label {
+                font-size: 0.95em;
+            }
+            .contact-form input, .contact-form textarea {
+                padding: 0.7rem;
+                font-size: 0.9em;
+            }
+            .contact-form button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1em;
+            }
+            .creator img {
+                width: 8rem;
+                height: 8rem;
+            }
+            .creator p {
+                font-size: 0.95em;
+            }
+            .creator .social-links-grid a {
+                padding: 0.7rem 1rem;
+                font-size: 0.9em;
+            }
+            .creator .social-links-grid a svg {
+                width: 1rem;
+                height: 1rem;
+            }
+            footer {
+                padding: 1rem;
+                font-size: 0.8em;
+            }
+        }
+        /* Classe para impedir rolagem do corpo */
+        .no-scroll {
+            overflow: hidden;
+        }
+
+        /* Modal Styling */
+        .modal-overlay {
+            /* Fix for the bug: Use visibility and opacity instead of display */
+            visibility: hidden; /* Hidden by default */
+            opacity: 0;
+            transition: visibility 0s 0.3s, opacity 0.3s ease-out; /* Delay visibility change */
+
+            position: fixed; /* Stay in place */
+            z-index: 1001; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+            display: flex; /* Always flex so content can be centered */
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px); /* Efeito de blur no fundo */
+        }
+
+        .modal-overlay.visible {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s; /* No delay when becoming visible */
+        }
+
+        .modal-content {
+            background-color: #1A1A1A;
+            margin: auto;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            position: relative;
+            max-width: 700px;
+            width: 90%;
+            color: #C9C9C9;
+            animation: slideIn 0.4s ease-out;
+            border: 2px solid #00FF88;
+        }
+
+        .modal-content h2 {
+            color: #00FF88;
+            font-size: 2em;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #00FF88;
+            padding-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+        .modal-content h2 svg {
+            width: 2rem;
+            height: 2rem;
+            fill: currentColor;
+        }
+
+        .modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: #fff;
+            font-size: 2.2em;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .modal-close-button:hover,
+        .modal-close-button:focus {
+            color: #00FF88;
+            transform: rotate(90deg);
+        }
+
+        .modal-content p {
+            margin-bottom: 1rem;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .modal-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+
+        .modal-content ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1em;
+        }
+
+        .modal-content ul li::before {
+            content: '•';
+            color: #00FF88;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.3em;
+            margin-left: -1.3em;
+            position: absolute;
+            left: 0;
+            font-size: 1.4em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsividade do Modal */
+        @media (max-width: 768px) {
+            .modal-content {
+                padding: 1.5rem;
+                width: 95%;
+            }
+            .modal-content h2 {
+                font-size: 1.8em;
+                margin-bottom: 1rem;
+            }
+            .modal-close-button {
+                font-size: 2em;
+                top: 0.8rem;
+                right: 1rem;
+            }
+            .modal-content p, .modal-content ul li {
+                font-size: 0.95em;
+            }
+            .modal-content ul li {
+                padding-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H9V9h2v6zm6-6h-2v6h2V9zm-3 9H8c-1.1 0-2 .9-2 2v2h12v-2c0-1.1-.9-2-2-2zM4 6c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6z"/></svg>
+        OVER BOT
+    </h1>
+    <p>Seu Passaporte para o **Digital Exclusivo** e uma **Comunidade VIP Premium** no Telegram.</p>
+    <div class="header-buttons">
+        <a href="#bot-links" class="cta-button">🚀 Acessar BOTs Agora!</a>
+        <button class="cta-button" id="openInstructionsModal">💡 Como Usar?</button>
+    </div>
+</header>
+
+<main>
+    <section class="destaques">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            Por Que Escolher a OVER BOT?
+        </h2>
+        <div class="destaques-grid">
+            <div class="destaque-item">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                    Conteúdo Exclusivo e Raro
+                </h3>
+                <p>Acesse uma vasta biblioteca de itens e recursos digitais únicos, atualizados constantemente para você.</p>
+                <a href="https://t.me/overstore71_bot" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top: 1.2rem; font-size: 0.95em; padding: 0.6rem 1.2rem;">Ver Itens Agora!</a>
+            </div>
+            <div class="destaque-item">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 16H4V8h16v12z"/></svg>
+                    Transações 100% Seguras e Rápidas
+                </h3>
+                <p>Compre diretamente pelos nossos bots no Telegram com total **segurança**, **agilidade** e **entrega garantida na hora**.</p>
+            </div>
+            <div class="destaque-item">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-4 0c1.66 0 2.99-1.34 2.99-3S13.66 5 12 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-4 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm8 4H8c-2.68 0-5.22 1.16-7 3.01V20c0 .55.45 1 1 1h18c.55 0 1-.45 1-1v-1.99C21.22 16.16 18.68 15 16 15z"/></svg>
+                    Comunidade VIP Exclusiva
+                </h3>
+                <p>Faça parte de um grupo seleto, com **suporte prioritário**, **acesso antecipado** a novidades e **promoções únicas**. Conecte-se e evolua!</p>
+                <a href="https://t.me/OverBan07" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top: 1.2rem; font-size: 0.95em; padding: 0.6rem 1.2rem;">Entrar na Comunidade VIP!</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bot-links" id="bot-links">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 11h-4V7h-2v4H7v2h4v4h2v-4h4zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+            Acesse Nossos BOTs de Venda Agora!
+        </h2>
+        <p>Descubra um universo de **conteúdo raro** e **vantagens exclusivas** disponíveis diretamente nos nossos bots do Telegram. Clique nos links abaixo para começar sua jornada:</p>
+        <a href="https://t.me/overstore71_bot" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.05 11.23L2.3 12.01l1.52 6.78c.13.57.73.91 1.3.78.36-.08.66-.3.8-.65l2.67-4.04 6.84 5.25c.57.44 1.37.28 1.63-.3.26-.58.1-1.38-.46-1.64l-11.4-8.88-3.34-.84c-.6-.15-1.02-.7-.94-1.3l.97-4.22c.08-.34.3-.64.65-.77.58-.13 1.18.21 1.3.78l1.52 6.78z"/></svg>
+            BOT 1 - OverStore: Seu Bot Principal para Itens Exclusivos
+        </a>
+        <a href="https://t.me/OverStorePremium_Bot" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            BOT 2 - OverStore Premium: Conteúdo VIP e Acesso Exclusivo
+        </a>
+    </section>
+
+    <section class="garantia-pagamentos">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg>
+            Compra 100% Segura e Entrega Instantânea!
+        </h2>
+        <div class="icon-text">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <p>Seus produtos são entregues **automaticamente** e **imediatamente** após a confirmação do pagamento, direto no Telegram. Sem esperas, sem complicações!</p>
+        </div>
+        <div class="icon-text">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm-2 17l-5-5 1.41-1.41L10 15.17l7.59-7.59L19 9.17l-9 9z"/></svg>
+            <p>Todas as transações são protegidas pelas mais **avançadas tecnologias de segurança**, garantindo a proteção dos seus dados e a integridade da sua compra.</p>
+        </div>
+        <h3 style="color: #E8E8E8; font-size: 1.5em; margin-top: 2.5rem; margin-bottom: 1.5rem; text-shadow: 0 0 10px rgba(255,255,255,0.3);">Métodos de Pagamento Aceitos:</h3>
+        <div class="payment-methods">
+            <div class="payment-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.8 8.8L12 2 5.2 8.8l1.4 1.4L12 4.8l5.4 5.4 1.4-1.4zM12 22l6.8-6.8-1.4-1.4L12 19.2l-5.4-5.4-1.4 1.4L12 22z"/></svg>
+                <span>PIX</span>
+            </div>
+            <div class="payment-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 4H6c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h12c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H6V8h12v10z"/></svg>
+                <span>Criptomoedas</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-demonstracao">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 15l5-3-5-3v6zM17 3H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7V5h10v14z"/></svg>
+            Veja o BOT em Ação! Compra 100% Automática!
+        </h2>
+        <p>Prepare-se para ver a magia acontecer! Assista nosso vídeo e comprove como é **fácil, rápido e 100% automático** adquirir seu conteúdo exclusivo na OVER BOT. Sua compra é entregue na hora, sem complicação!</p>
+        <h3>🚨 BOT 100% AUTOMÁTICO 2025 | ENTREGA NA HORA × PRIVADO ESTILO TRAVAZAP • EXPLICADO AO VIVO. !!!</h3>
+        <p>Canal: APELA DUS IMUNES 🅥</p>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/bBFyezSgatM"
+                    title="Demonstração do OVER BOT: Bot automático 2025 com entrega instantânea e funcionalidades de trava zap, explicado ao vivo no canal APELA DUS IMUNES."
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section class="depoimentos">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-1.99 2L2 18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-9 9H9V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/></svg>
+            O Que Nossos Usuários Dizem
+        </h2>
+        <p class="depoimentos-counter">✨ Mais de 10.000 Usuários Satisfeitos! ✨</p>
+        <div class="depoimento-item">
+            <img src="https://www.gravatar.com/avatar/0?d=mp&s=200" alt="Avatar de Lucas GamerPro" class="avatar">
+            <p>"Nunca imaginei que encontrar itens tão exclusivos seria tão fácil! A OverStore é incrível, sempre com novidades e um suporte rápido. Recomendo demais!"</p>
+            <cite>— Lucas "GamerPro" M.</cite>
+        </div>
+        <div class="depoimento-item">
+            <img src="https://www.gravatar.com/avatar/0?d=mp&s=200" alt="Avatar de Ana TopPlayer" class="avatar">
+            <p>"Entrar para o Grupo VIP foi a melhor decisão. O acesso antecipado e as promoções exclusivas fazem toda a diferença. Sem falar na comunidade, que é muito engajada."</p>
+            <cite>— Ana "TopPlayer" S.</cite>
+        </div>
+        <div class="depoimento-item">
+            <img src="https://www.gravatar.com/avatar/0?d=mp&s=200" alt="Avatar de Ricardo Colecionador" class="avatar">
+            <p>"A segurança e a rapidez nas transações são um diferencial. Encontrei exatamente o que procurava e o processo foi impecável. Parabéns pelo trabalho!"</p>
+            <cite>— Ricardo "Colecionador" P.</cite>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+            Perguntas Frequentes (FAQ)
+        </h2>
+        <div class="faq-item">
+            <h3>Como funciona a entrega dos itens após a compra?
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+            </h3>
+            <div class="faq-answer">
+                <p>A entrega na OVER BOT é **100% automática e instantânea**! Assim que seu pagamento é confirmado, você recebe seu item diretamente pelo bot no Telegram. Isso garante que você tenha acesso imediato ao conteúdo, sem esperas ou burocracia. Nosso sistema foi projetado para sua total comodidade e agilidade!</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Qual a qualidade dos itens e eles são vitalícios?
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+            </h3>
+            <div class="faq-answer">
+                <p>Nosso compromisso é com a **qualidade superior** de todos os itens oferecidos. Trabalhamos para que cada produto atenda às suas expectativas, sendo funcional e valioso. Sobre a validade, a maioria dos nossos itens e acessos são **vitalícios**, garantindo que você possa usufruir deles sem prazo de expiração. Em casos específicos onde a validade seja limitada, isso estará claramente indicado na descrição do produto antes da compra.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Quais métodos de pagamento são aceitos e como funciona o processo?
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+            </h3>
+            <div class="faq-answer">
+                <p>Na OVER BOT, oferecemos métodos de pagamento modernos e seguros para sua conveniência: aceitamos **PIX** e **Criptomoedas**. O processo é totalmente integrado aos nossos bots do Telegram: após escolher seu item, o bot gerará as informações necessárias para o pagamento. Uma vez que a transação é confirmada em nossa plataforma segura, a entrega do item é feita instantaneamente. Tudo para uma experiência de compra sem preocupações!</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Como faço para comprar itens exclusivos?
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+            </h3>
+            <div class="faq-answer">
+                <p>Comprar na OVER BOT é super simples e rápido! Basta clicar em qualquer um dos links dos nossos bots de venda no Telegram, como o **BOT 1 - OverStore**. Ao iniciar o bot, você encontrará a opção **"CONTEÚDO EXCLUSIVO"**. Navegue pelos itens disponíveis, escolha o que deseja e siga as instruções para finalizar sua compra. A entrega é **100% automática e imediata** após a confirmação do pagamento!</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Quais as vantagens de ser um membro VIP?
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+            </h3>
+            <div class="faq-answer">
+                <p>Ser um membro VIP da OVER BOT te coloca em um nível acima! Você terá **acesso antecipado** a novos conteúdos e atualizações, **suporte prioritário** para resolver suas dúvidas mais rapidamente, e **promoções e descontos exclusivos** que não estão disponíveis para outros usuários. Além disso, fará parte de uma **comunidade vibrante e engajada** no nosso grupo VIP exclusivo do Telegram. Para aderir, acesse o **BOT 2 - OverStore Premium**.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>É seguro comprar pelos BOTs do Telegram?
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+            </h3>
+            <div class="faq-answer">
+                <p>Sim, sua segurança é nossa prioridade máxima! Todas as transações na OVER BOT são realizadas com **total segurança e criptografia de ponta** diretamente dentro da plataforma Telegram. Utilizamos métodos de pagamento confiáveis como **PIX e Criptomoedas**, que garantem a proteção dos seus dados financeiros. A entrega dos seus itens é **garantida e automática**, eliminando qualquer risco de falha na entrega.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Preciso de algum software especial para usar os itens?
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+            </h3>
+            <div class="faq-answer">
+                <p>Não! A maioria dos nossos itens é projetada para ser **de fácil uso** e não exige softwares complexos ou conhecimentos técnicos avançados. Se algum item específico demandar uma ferramenta adicional, isso estará claramente especificado em sua descrição. Nosso objetivo é proporcionar a melhor experiência, com a máxima praticidade!</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Posso revender os itens que compro na OVER BOT?
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/></svg>
+            </h3>
+            <div class="faq-answer">
+                <p>A revenda dos itens adquiridos na OVER BOT é **estritamente proibida**, a menos que haja um acordo de parceria formalizado conosco. Nossos conteúdos são exclusivos para uso pessoal, ou conforme licença específica de cada produto. A violação desta política pode resultar na revogação do acesso aos itens e banimento de nossos serviços. Valorizamos a exclusividade e a integridade de nossa comunidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Fale Conosco
+        </h2>
+        <p>Tem alguma pergunta, sugestão ou parceria em mente? Envie-nos uma mensagem!</p>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <label for="name">Seu Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Seu Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Sua Mensagem:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+            <div id="formMessage"></div>
+        </form>
+    </section>
+
+    <section class="creator">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            Conheça o Criador
+        </h2>
+        <p>Por trás da OVER BOT, está um criador dedicado a trazer o melhor conteúdo e as melhores experiências para você. Conecte-se com ele nas redes:</p>
+        <img src="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" alt="ApelaWar, criador da OVER BOT, em um fundo vibrante de neon, representando inovação e conexão digital." loading="lazy">
+        <div class="social-links-grid">
+            <a href="https://www.youtube.com/@apelawar_yt" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 15l5-3-5-3v6zM17 3H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7V5h10v14z"/></svg>
+                YouTube - @apelawar_yt
+            </a>
+            <a href="https://br.pinterest.com/APELAWAR71/" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0 4c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/></svg>
+                Pinterest - @APELAWAR71
+            </a>
+            <a href="https://t.me/ApelaWar71" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.05 11.23L2.3 12.01l1.52 6.78c.13.57.73.91 1.3.78.36-.08.66-.3.8-.65l2.67-4.04 6.84 5.25c.57.44 1.37.28 1.63-.3.26-.58.1-1.38-.46-1.64l-11.4-8.88-3.34-.84c-.6-.15-1.02-.7-.94-1.3l.97-4.22c.08-.34.3-.64.65-.77.58-.13 1.18.21 1.3.78l1.52 6.78z"/></svg>
+                Telegram - @ApelaWar71
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    © 2025 OVER BOT. Todos os direitos reservados. Desenvolvido com paixão por <a href="https://t.me/ApelaWar71" target="_blank" rel="noopener noreferrer">ApelaWar</a>.
+    <div class="footer-links">
+        <a href="#politica-privacidade">Política de Privacidade</a> |
+        <a href="#termos-uso">Termos de Uso</a>
+        <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer">
+            Suporte Telegram
+            <svg style="width: 1.1rem; height: 1.1rem; fill: currentColor; vertical-align: middle; margin-left: 0.3rem;" viewBox="0 0 24 24"><path d="M.05 11.23L2.3 12.01l1.52 6.78c.13.57.73.91 1.3.78.36-.08.66-.3.8-.65l2.67-4.04 6.84 5.25c.57.44 1.37.28 1.63-.3.26-.58.1-1.38-.46-1.64l-11.4-8.88-3.34-.84c-.6-.15-1.02-.7-.94-1.3l.97-4.22c.08-.34.3-.64.65-.77.58-.13 1.18.21 1.3.78l1.52 6.78z"/></svg>
+        </a>
+    </div>
+</footer>
+
+<button id="openChatbotBtn" aria-label="Abrir Chat de Suporte">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+    </svg>
+</button>
+
+<div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+        Suporte OVER BOT
+        <button class="close-btn" id="closeChatbotBtn">×</button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message-bot">
+            <img src="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" alt="Avatar do Bot" style="width: 2.5rem; height: 2.5rem; border-radius: 50%; vertical-align: middle; margin-right: 0.6rem;">
+            Olá! Seja bem-vindo(a) à OVER BOT! Sou seu assistente virtual. Como posso ajudar hoje?
+        </div>
+        <div class="typing-indicator" id="typingIndicator">
+            <img src="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" alt="Avatar do Bot" style="width: 1.8rem; height: 1.8rem; border-radius: 50%;">
+            <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
+        </div>
+    </div>
+    <div class="chatbot-options" id="chatbotOptions">
+        <button class="chatbot-option-button" data-question="entrega">Como funciona a entrega dos itens?</button>
+        <button class="chatbot-option-button" data-question="itens">Qual a qualidade dos itens e eles são vitalícios?</button>
+        <button class="chatbot-option-button" data-question="pagamento">Quais métodos de pagamento são aceitos?</button>
+        <button class="chatbot-option-button" data-question="vip">Quais as vantagens de ser um membro VIP?</button>
+        <button class="chatbot-option-button" data-question="seguranca">É seguro comprar pelos BOTs do Telegram?</button>
+        <button class="chatbot-option-button" data-question="software">Preciso de algum software especial para usar os itens?</button>
+        <button class="chatbot-option-button" data-question="revenda">Posso revender os itens que compro na OVER BOT?</button>
+        <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">Falar com suporte humano (Telegram)</a>
+        <button class="chatbot-option-button end-chat" id="endChatButton">Encerrar Atendimento</button>
+    </div>
+</div>
+
+
+<div id="instructionsModal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="modal-close-button">×</button>
+        <h2>💡 Como Usar Nossos BOTs</h2>
+        <p>É super fácil começar a usar os bots da OVER BOT e ter acesso a um mundo de **itens exclusivos** e **benefícios VIP**. Siga estes passos simples:</p>
+        <ul>
+            <li><p>1️⃣ Clique no botão **START** em cada um dos BOTs acima. Você será saudado com uma mensagem de boas-vindas e as principais opções.</p></li>
+            <li><p>2️⃣ Após iniciar, você verá a opção **CONTEÚDO EXCLUSIVO**. Clique nela para navegar por uma vasta coleção de **itens raros, vantagens e recursos digitais** que você não encontra em outro lugar!</p></li>
+            <li><p>3️⃣ Cada item possui uma descrição detalhada e o preço, facilitando sua escolha. Siga as instruções do bot para finalizar sua compra de forma **segura e rápida**.</p></li>
+            <li><p>4️⃣ Também verá a opção **GRUPO VIP** que, ao clicar, mostra os **planos de acesso 100%** ao nosso grupo exclusivo. No **Grupo VIP**, você terá acesso a **conteúdo antecipado, suporte prioritário, promoções especiais** e uma comunidade vibrante de usuários.</p></li>
+            <li><p>5️⃣ Para qualquer dúvida ou suporte, não hesite em nos contatar através do Telegram do criador!</p></li>
+        </ul>
+    </div>
+</div>
+
+<section id="politica-privacidade" style="display: none; padding-top: 6.25rem; margin-top: -6.25rem;">
+    <h2>Política de Privacidade</h2>
+    <p>Nesta seção, detalhamos como a OVER BOT coleta, usa e protege seus dados pessoais. Valorizamos sua privacidade e estamos comprometidos em manter suas informações seguras. Ao utilizar nossos serviços, você concorda com as práticas descritas nesta política.</p>
+    <h3>Coleta de Dados</h3>
+    <p>Coletamos informações que você nos fornece diretamente ao interagir com nossos bots no Telegram, como nome de usuário, ID do Telegram e detalhes da transação. Não coletamos dados sensíveis como informações financeiras detalhadas diretamente em nosso site; as transações são processadas por plataformas seguras.</p>
+    <h3>Uso das Informações</h3>
+    <p>Seus dados são utilizados para: processar suas compras, fornecer acesso a conteúdos exclusivos e grupos VIP, personalizar sua experiência, melhorar nossos serviços e comunicar sobre atualizações e promoções. Não compartilhamos suas informações com terceiros, exceto quando necessário para a prestação dos serviços (ex: processadores de pagamento).</p>
+    <h3>Segurança dos Dados</h3>
+    <p>Implementamos medidas de segurança robustas para proteger suas informações contra acesso não autorizado, alteração, divulgação ou destruição. Todas as comunicações com nossos bots são criptografadas e monitoramos continuamente nossos sistemas para identificar e mitigar riscos.</p>
+    <h3>Seus Direitos</h3>
+    <p>Você tem o direito de acessar, corrigir ou solicitar a exclusão de seus dados pessoais a qualquer momento. Para exercer esses direitos ou para qualquer dúvida sobre nossa política de privacidade, entre em contato conosco através dos canais de suporte.</p>
+</section>
+
+<section id="termos-uso" style="display: none; padding-top: 6.25rem; margin-top: -6.25rem;">
+    <h2>Termos de Uso</h2>
+    <p>Bem-vindo(a) à OVER BOT! Ao utilizar nossos bots e serviços, você concorda com os seguintes Termos de Uso. Leia-os atentamente.</p>
+    <h3>Aceitação dos Termos</h3>
+    <p>Ao acessar ou usar qualquer um dos nossos bots e serviços, você concorda em estar vinculado(a) por estes Termos de Uso. Se você não concorda com qualquer parte dos termos, não utilize nossos serviços.</p>
+    <h3>Serviços Oferecidos</h3>
+    <p>A OVER BOT oferece acesso a itens digitais exclusivos, conteúdo raro e comunidades VIP por meio de bots na plataforma Telegram. Nossos serviços são fornecidos "como estão", e nos reservamos o direito de modificar, suspender ou descontinuar qualquer aspecto dos serviços a qualquer momento, sem aviso prévio.</p>
+    <h3>Conduta do Usuário</h3>
+    <p>Você concorda em usar nossos serviços apenas para fins lícitos e de uma maneira que não infrinja os direitos de terceiros ou restrinja o uso e o aproveitamento de nossos serviços por qualquer pessoa. É proibido o uso indevido, a revenda não autorizada ou a distribuição do conteúdo adquirido.</p>
+    <h3>Propriedade Intelectual</h3>
+    <p>Todo o conteúdo disponível através dos bots e do site OVER BOT, incluindo textos, gráficos, logos, ícones e software, é de propriedade da OVER BOT ou de seus licenciadores e é protegido por leis de direitos autorais e outras leis de propriedade intelectual.</p>
+    <h3>Limitação de Responsabilidade</h3>
+    <p>A OVER BOT não será responsável por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais decorrentes do uso ou da incapacidade de usar nossos serviços ou do acesso a conteúdos de terceiros.</p>
+    <h3>Alterações nos Termos</h3>
+    <p>Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. Quaisquer alterações entrarão em vigor imediatamente após a publicação no site. É sua responsabilidade revisar periodicamente estes termos. O uso continuado dos serviços após as alterações constitui aceitação dos novos termos.</p>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const openModalBtn = document.getElementById('openInstructionsModal');
+        const modal = document.getElementById('instructionsModal');
+        const closeModalBtn = modal.querySelector('.modal-close-button');
+        const body = document.body;
+
+        // --- Correção do Bug do Modal "Como Usar?" ---
+        // Atraso ocorre porque 'display' não é transicionável.
+        // Usamos 'visibility' e 'opacity' juntos para um efeito suave.
+        openModalBtn.addEventListener('click', function() {
+            modal.classList.add('visible'); // Adiciona a classe para mostrar o modal
+            body.classList.add('no-scroll');
+        });
+
+        closeModalBtn.addEventListener('click', function() {
+            modal.classList.remove('visible'); // Remove a classe para esconder o modal
+            body.classList.remove('no-scroll');
+        });
+
+        modal.addEventListener('click', function(event) {
+            // Fecha o modal se o clique for no overlay (fora do modal-content)
+            if (event.target === modal) {
+                modal.classList.remove('visible');
+                body.classList.remove('no-scroll');
+            }
+        });
+
+        // FAQ (Accordion)
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const arrow = item.querySelector('.faq-item h3 svg');
+                // Fecha outras respostas abertas
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').classList.remove('open');
+                        otherItem.querySelector('.faq-item h3 svg').classList.remove('rotated');
+                    }
+                });
+                answer.classList.toggle('open');
+                arrow.classList.toggle('rotated');
+            });
+        });
+
+        // Contact Form (Formspree)
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        contactForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            // Validação simples dos campos
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                formMessage.textContent = 'Por favor, preencha todos os campos.';
+                formMessage.className = 'error visible';
+                setTimeout(() => {
+                    formMessage.classList.remove('visible');
+                    setTimeout(() => { formMessage.textContent = ''; formMessage.className = ''; }, 500);
+                }, 3000);
+                return; // Impede o envio se os campos estiverem vazios
+            }
+
+            const form = event.target;
+            const data = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formMessage.textContent = 'Mensagem enviada com sucesso! Em breve entraremos em contato.';
+                    formMessage.className = 'success visible';
+                    form.reset();
+                } else {
+                    const responseData = await response.json();
+                    if (responseData.errors) {
+                        formMessage.textContent = responseData.errors.map(error => error.message).join(', ');
+                    } else {
+                        formMessage.textContent = 'Ocorreu um erro ao enviar a mensagem. Tente novamente.';
+                    }
+                    formMessage.className = 'error visible';
+                }
+            } catch (error) {
+                console.error('Erro de rede ou envio:', error);
+                formMessage.textContent = 'Erro de rede. Tente novamente mais tarde.';
+                formMessage.className = 'error visible';
+            } finally {
+                setTimeout(() => {
+                    formMessage.classList.remove('visible');
+                    setTimeout(() => {
+                        formMessage.textContent = '';
+                        formMessage.className = '';
+                    }, 500);
+                }, 5000);
+            }
+        });
+
+        // Chatbot Functionality
+        const openChatbotBtn = document.getElementById('openChatbotBtn');
+        const chatbotContainer = document.getElementById('chatbotContainer');
+        const closeChatbotBtn = document.getElementById('closeChatbotBtn');
+        const chatbotMessages = document.getElementById('chatbotMessages');
+        let typingIndicator = document.getElementById('typingIndicator'); // Declare with let
+        const endChatButton = document.getElementById('endChatButton');
+        const chatbotOptions = document.getElementById('chatbotOptions');
+
+
+        const botAvatarUrl = "https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif"; // Foto do bot digitando
+
+        const faqAnswers = {
+            "entrega": "A entrega na OVER BOT é **100% automática e instantânea**! Assim que seu pagamento é confirmado, você recebe seu item diretamente pelo bot no Telegram. Isso garante que você tenha acesso imediato ao conteúdo, sem esperas ou burocracia. Nosso sistema foi projetado para sua total comodidade e agilidade!",
+            "itens": "Nosso compromisso é com a **qualidade superior** de todos os itens oferecidos. Trabalhamos para que cada produto atenda às suas expectativas, sendo funcional e valioso. Sobre a validade, a maioria dos nossos itens e acessos são **vitalícios**, garantindo que você possa usufruir deles sem prazo de expiração. Em casos específicos onde a validade seja limitada, isso estará claramente indicado na descrição do produto antes da compra.",
+            "pagamento": "Na OVER BOT, oferecemos métodos de pagamento modernos e seguros para sua conveniência: aceitamos **PIX** e **Criptomoedas**. O processo é totalmente integrado aos nossos bots do Telegram: após escolher seu item, o bot gerará as informações necessárias para o pagamento. Uma vez que a transação é confirmada em nossa plataforma segura, a entrega do item é feita instantaneamente. Tudo para uma experiência de compra sem preocupações!",
+            "vip": "Ser um membro VIP da OVER BOT te coloca em um nível acima! Você terá **acesso antecipado** a novos conteúdos e atualizações, **suporte prioritário** para resolver suas dúvidas mais rapidamente, e **promoções e descontos exclusivos** que não estão disponíveis para outros usuários. Além disso, fará parte de uma **comunidade vibrante e engajada** no nosso grupo VIP exclusivo do Telegram. Para aderir, acesse o **BOT 2 - OverStore Premium**.",
+            "seguranca": "Sim, sua segurança é nossa prioridade máxima! Todas as transações na OVER BOT são realizadas com **total segurança e criptografia de ponta** diretamente dentro da plataforma Telegram. Utilizamos métodos de pagamento confiáveis como **PIX e Criptomoedas**, que garantem a proteção dos seus dados financeiros. A entrega dos seus itens é **garantida e automática**, eliminando qualquer risco de falha na entrega.",
+            "software": "Não! A maioria dos nossos itens é projetada para ser **de fácil uso** e não exige softwares complexos ou conhecimentos técnicos avançados. Se algum item específico demandar uma ferramenta adicional, isso estará claramente especificado em sua descrição. Nosso objetivo é proporcionar a melhor experiência, com a máxima praticidade!",
+            "revenda": "A revenda dos itens adquiridos na OVER BOT é **estritamente proibida**, a menos que haja um acordo de parceria formalizado conosco. Nossos conteúdos são exclusivos para uso pessoal, ou conforme licença específica de cada produto. A violação desta política pode resultar na revogação do acesso aos itens e banimento de nossos serviços. Valorizamos a exclusividade e a integridade de nossa comunidade."
+        };
+
+        function addMessage(text, sender, isHtml = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add(sender === 'bot' ? 'message-bot' : 'message-user');
+            if (sender === 'bot') {
+                const botImg = document.createElement('img');
+                botImg.src = botAvatarUrl;
+                botImg.alt = "Avatar do Bot";
+                botImg.style = "width: 2.5rem; height: 2.5rem; border-radius: 50%; vertical-align: middle; margin-right: 0.6rem;";
+                messageDiv.appendChild(botImg);
+            }
+            if (isHtml) {
+                messageDiv.innerHTML += text; // Adiciona HTML diretamente
+            } else {
+                messageDiv.textContent += text; // Adiciona texto seguro
+            }
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Rola para o final
+        }
+
+        function showTypingIndicator() {
+            typingIndicator.classList.add('visible');
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function hideTypingIndicator() {
+            typingIndicator.classList.remove('visible');
+        }
+
+        function resetChat() {
+            chatbotMessages.innerHTML = `
+                <div class="message-bot">
+                    <img src="${botAvatarUrl}" alt="Avatar do Bot" style="width: 2.5rem; height: 2.5rem; border-radius: 50%; vertical-align: middle; margin-right: 0.6rem;">
+                    Olá! Seja bem-vindo(a) à OVER BOT! Sou seu assistente virtual. Como posso ajudar hoje?
+                </div>
+                <div class="typing-indicator" id="typingIndicator">
+                    <img src="${botAvatarUrl}" alt="Avatar do Bot" style="width: 1.8rem; height: 1.8rem; border-radius: 50%;">
+                    <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
+                </div>
+            `;
+            // Reatribui a referência do typingIndicator para o novo elemento após resetar o innerHTML
+            typingIndicator = document.getElementById('typingIndicator');
+            hideTypingIndicator(); // Esconde inicialmente
+        }
+
+
+        openChatbotBtn.addEventListener('click', function() {
+            chatbotContainer.style.display = 'flex';
+            body.classList.add('no-scroll');
+            resetChat(); // Reinicia o chat ao abrir
+        });
+
+        closeChatbotBtn.addEventListener('click', function() {
+            chatbotContainer.style.display = 'none';
+            body.classList.remove('no-scroll');
+        });
+
+        chatbotOptions.addEventListener('click', function(event) {
+            if (event.target.classList.contains('chatbot-option-button') && !event.target.classList.contains('end-chat') && !event.target.classList.contains('telegram-link')) {
+                const questionKey = event.target.dataset.question;
+                const questionText = event.target.textContent;
+
+                addMessage(questionText, 'user');
+                showTypingIndicator();
+
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    const answer = faqAnswers[questionKey] || "Desculpe, não consegui encontrar uma resposta para essa pergunta. Por favor, tente novamente ou clique em 'Falar com suporte humano' para obter ajuda personalizada.";
+                    addMessage(answer, 'bot');
+                }, 1500); // Simula tempo de digitação do bot
+            }
+        });
+
+        endChatButton.addEventListener('click', function() {
+            addMessage("Obrigado por entrar em contato com a OVER BOT! Se precisar de algo mais, é só abrir o chat novamente. Tenha um ótimo dia!", 'bot');
+            // Remove as opções de pergunta, deixando só a opção de reabrir ou ir para o Telegram
+            chatbotOptions.innerHTML = `
+                <button class="chatbot-option-button" id="startNewChatButton">Iniciar Novo Atendimento</button>
+                <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">Falar com suporte humano (Telegram)</a>
+                <button class="chatbot-option-button end-chat" id="closeChatFinal">Fechar Chat</button>
+            `;
+            document.getElementById('startNewChatButton').addEventListener('click', function() {
+                resetChat();
+                // Restaura as opções originais
+                chatbotOptions.innerHTML = `
+                    <button class="chatbot-option-button" data-question="entrega">Como funciona a entrega dos itens?</button>
+                    <button class="chatbot-option-button" data-question="itens">Qual a qualidade dos itens e eles são vitalícios?</button>
+                    <button class="chatbot-option-button" data-question="pagamento">Quais métodos de pagamento são aceitos?</button>
+                    <button class="chatbot-option-button" data-question="vip">Quais as vantagens de ser um membro VIP?</button>
+                    <button class="chatbot-option-button" data-question="seguranca">É seguro comprar pelos BOTs do Telegram?</button>
+                    <button class="chatbot-option-button" data-question="software">Preciso de algum software especial para usar os itens?</button>
+                    <button class="chatbot-option-button" data-question="revenda">Posso revender os itens que compro na OVER BOT?</button>
+                    <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">Falar com suporte humano (Telegram)</a>
+                    <button class="chatbot-option-button end-chat" id="endChatButton">Encerrar Atendimento</button>
+                `;
+                 // Reatribui o listener ao botão de encerrar atendimento original
+                document.getElementById('endChatButton').addEventListener('click', arguments.callee);
+            });
+             document.getElementById('closeChatFinal').addEventListener('click', function() {
+                chatbotContainer.style.display = 'none';
+                body.classList.remove('no-scroll');
+            });
+        });
+
+        // Update YouTube links to the correct ones
+        // IMPORTANT: Replace 'YOUR_VIDEO_ID' with the actual YouTube video ID
+        const youtubeIframe = document.querySelector('.video-demonstracao iframe');
+        if (youtubeIframe) {
+            youtubeIframe.src = `https://www.youtube.com/embed/bBFyezSgatM`; // Coloque o ID real do seu vídeo aqui
+        }
+
+        const youtubeSocialLink = document.querySelector('.creator .social-links-grid a[href="https://www.youtube.com/@apelawar_yt"]');
+        // This link already looks correct based on your original request. No change needed unless it's wrong.
+        // If it was meant to be the Rick Astley one, that was just an example and should be changed back.
+    });
+</script>
+
+</body>
+</html>
