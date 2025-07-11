@@ -9,7 +9,8 @@
     <meta property="og:title" content="OVER BOT - Venda de Itens Exclusivos e Acesso VIP" />
     <meta property="og:description" content="Sua porta de entrada para itens digitais exclusivos e uma comunidade VIP premium no Telegram. Descubra o que você estava perdendo!" />
     <meta property="og:image" content="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" />
-    <meta property="og:url" content="https://seusiteoverbot.com.br" /> <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seusiteoverbot.com.br" />
+    <meta property="og:type" content="website" />
 
     <title>OVER BOT - Inovação e Acesso VIP para o Futuro Digital</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -451,6 +452,72 @@
             font-size: 0.95em;
             color: #C9C9C9;
         }
+
+        /* New section: Nossos Produtos em Destaque */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background-color: #1A1A1A;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #282828;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-0.8rem);
+            box-shadow: 0 15px 35px rgba(0, 255, 136, 0.7);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #333;
+        }
+
+        .product-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card-content h3 {
+            color: #00BFFF;
+            font-size: 1.4em;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .product-card-content p {
+            font-size: 0.9em;
+            color: #C9C9C9;
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .product-card-content .cta-button {
+            width: fit-content;
+            margin: 0.5rem auto 0;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9em;
+        }
+        /* End new section */
+
 
         /* Video Demonstracao Section */
         .video-demonstracao .video-wrapper {
@@ -1104,6 +1171,14 @@
             border-bottom-left-radius: 0.1rem;
         }
 
+        .message-bot img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 0.6rem;
+        }
+
         .message-user {
             background-color: #00BFFF;
             align-self: flex-end;
@@ -1186,6 +1261,9 @@
             background-color: #00BFFF;
             color: #fff;
             box-shadow: 0 2px 8px rgba(0, 191, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .chatbot-option-button.telegram-link:hover {
             background-color: #00A3D9;
@@ -1536,6 +1614,7 @@
         <li><a href="#main-header">Início</a></li>
         <li><a href="#about-us">Sobre Nós</a></li>
         <li><a href="#bot-links">Nossos Bots</a></li>
+        <li><a href="#products">Nossos Produtos</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#blog">Blog</a></li>
@@ -1586,6 +1665,45 @@
                 <a href="https://t.me/OverBan07" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top: 1.2rem; font-size: 0.95em; padding: 0.6rem 1.2rem;">Entrar na Comunidade VIP!</a>
             </div>
         </div>
+    </section>
+
+    ---
+
+    <section id="products">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 16H4V8h16v12z"/></svg>
+            Nossos Produtos em Destaque
+        </h2>
+        <p>Explore uma amostra dos nossos **itens digitais exclusivos** mais populares. Cada produto é cuidadosamente selecionado para oferecer valor e originalidade.</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://i.ibb.co/9HMd0PS1/IMG-1220.jpg" alt="Pacote de Emojis Raros para Telegram" loading="lazy">
+                <div class="product-card-content">
+                    <h3>Pacote VIP de Emojis Exclusivos</h3>
+                    <p>Mais de 500 emojis e figurinhas animadas para turbinar suas conversas no Telegram. Exclusividade garantida!</p>
+                    <a href="https://t.me/overstore71_bot" target="_blank" rel="noopener noreferrer" class="cta-button">Ver no Bot</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/wryYFsGp/IMG-7835.jpg" alt="Acesso a Ferramenta de Otimização Digital" loading="lazy">
+                <div class="product-card-content">
+                    <h3>Ferramenta de Otimização Digital Pro</h3>
+                    <p>Software para otimização de performance. Acelere seus dispositivos e melhore sua produtividade.</p>
+                    <a href="https://t.me/overstore71_bot" target="_blank" rel="noopener noreferrer" class="cta-button">Ver no Bot</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ibb.co/4nhtTwcY/IMG-1221.jpg" alt="Biblioteca de Sons e Efeitos Premium" loading="lazy">
+                <div class="product-card-content">
+                    <h3>Biblioteca de Sons e Efeitos Premium</h3>
+                    <p>Coleção rara de áudios de alta qualidade para criadores de conteúdo, gamers e produtores.</p>
+                    <a href="https://t.me/overstore71_bot" target="_blank" rel="noopener noreferrer" class="cta-button">Ver no Bot</a>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">
+            <a href="https://t.me/overstore71_bot" target="_blank" rel="noopener noreferrer" class="cta-button">Ver Todos os Itens no BOT!</a>
+        </p>
     </section>
 
     ---
@@ -1659,6 +1777,10 @@
         <a href="https://t.me/OverStorePremium_Bot" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
             BOT 2 - OverStore Premium: Conteúdo VIP e Acesso Exclusivo
+        </a>
+        <a href="https://t.me/yamideals_bot" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+            BOT 3 - YAMI PREMIUM: Ofertas Exclusivas e Conteúdo Secreto
         </a>
     </section>
 
@@ -1931,23 +2053,28 @@
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
         <div class="message-bot">
-            <img src="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" alt="Avatar do Bot" style="width: 2.5rem; height: 2.5rem; border-radius: 50%; vertical-align: middle; margin-right: 0.6rem;">
+            <img src="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" alt="Avatar do Bot">
             Olá! Seja bem-vindo(a) à OVER BOT! Sou seu assistente virtual. Como posso ajudar hoje?
         </div>
         <div class="typing-indicator" id="typingIndicator">
-            <img src="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" alt="Avatar do Bot" style="width: 1.8rem; height: 1.8rem; border-radius: 50%;">
+            <img src="https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif" alt="Avatar do Bot">
             <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
         </div>
     </div>
     <div class="chatbot-options" id="chatbotOptions">
         <button class="chatbot-option-button" data-question="entrega">Como funciona a entrega dos itens?</button>
-        <button class="chatbot-option-button" data-question="itens">Qual a qualidade dos itens e eles são vitalícios?</button>
+        <button class="chatbot-option-button" data-question="qualidade">Qual a qualidade dos itens e eles são vitalícios?</button>
         <button class="chatbot-option-button" data-question="pagamento">Quais métodos de pagamento são aceitos?</button>
+        <button class="chatbot-option-button" data-question="comprar">Como faço para comprar itens exclusivos?</button>
         <button class="chatbot-option-button" data-question="vip">Quais as vantagens de ser um membro VIP?</button>
-        <button class="chatbot-option-button" data-question="seguranca">É seguro comprar pelos BOTs do Telegram?</button>
-        <button class="chatbot-option-button" data-question="software">Preciso de algum software especial para usar os itens?</button>
-        <button class="chatbot-option-button" data-question="revenda">Posso revender os itens que compro na OVER BOT?</button>
-        <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">Falar com suporte humano (Telegram)</a>
+        <button class="chatbot-option-button" data-question="seguranca_bot">É seguro comprar pelos BOTs do Telegram?</button>
+        <button class="chatbot-option-button" data-question="software_itens">Preciso de software especial para usar os itens?</button>
+        <button class="chatbot-option-button" data-question="revenda_itens">Posso revender os itens que compro?</button>
+        <button class="chatbot-option-button" data-question="contato_geral">Outras Dúvidas / Falar com Suporte</button>
+        <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">
+            <svg style="width: 1.2rem; height: 1.2rem; fill: currentColor; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M.05 11.23L2.3 12.01l1.52 6.78c.13.57.73.91 1.3.78.36-.08.66-.3.8-.65l2.67-4.04 6.84 5.25c.57.44 1.37.28 1.63-.3.26-.58.1-1.38-.46-1.64l-11.4-8.88-3.34-.84c-.6-.15-1.02-.7-.94-1.3l.97-4.22c.08-.34.3-.64.65-.77.58-.13 1.18.21 1.3.78l1.52 6.78z"/></svg>
+            Falar com Suporte Humano
+        </a>
         <button class="chatbot-option-button end-chat" id="endChatButton">Encerrar Atendimento</button>
     </div>
 </div>
@@ -1957,10 +2084,10 @@
         <button class="modal-close-button">×</button>
         <h2 id="blogPostTitle"></h2>
         <h3 id="blogPostSubtitle"></h3>
-        <p id="blogPostContent"></p>
+        <div id="blogPostContent"></div>
         <p style="font-style: italic; color: #888; text-align: right; font-size: 0.9em; margin-top: 1.5rem;">Publicado em: <span id="blogPostDate"></span></p>
         <p style="font-weight: bold; text-align: center; margin-top: 2rem; color: #00FF88;">Gostou do que leu? Explore mais em nossos bots e junte-se à nossa comunidade!</p>
-        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
             <a href="https://t.me/overstore71_bot" target="_blank" rel="noopener noreferrer" class="cta-button">Acessar Bot Principal</a>
             <a href="https://t.me/OverBan07" target="_blank" rel="noopener noreferrer" class="cta-button" style="background-color: #00BFFF; box-shadow: 0 8px 25px rgba(0, 191, 255, 0.7);">Entrar na Comunidade VIP</a>
         </div>
@@ -1987,15 +2114,40 @@
     <div class="modal-content">
         <button class="modal-close-button">×</button>
         <h2>Política de Privacidade</h2>
-        <p>Nesta seção, detalhamos como a OVER BOT coleta, usa e protege seus dados pessoais. Valorizamos sua privacidade e estamos comprometidos em manter suas informações seguras. Ao utilizar nossos serviços, você concorda com as práticas descritas nesta política.</p>
-        <h3>Coleta de Dados</h3>
-        <p>Coletamos informações que você nos fornece diretamente ao interagir com nossos bots no Telegram, como nome de usuário, ID do Telegram e detalhes da transação. Não coletamos dados sensíveis como informações financeiras detalhadas diretamente em nosso site; as transações são processadas por plataformas seguras.</p>
-        <h3>Uso das Informações</h3>
-        <p>Seus dados são utilizados para: processar suas compras, fornecer acesso a conteúdos exclusivos e grupos VIP, personalizar sua experiência, melhorar nossos serviços e comunicar sobre atualizações e promoções. Não compartilhamos suas informações com terceiros, exceto quando necessário para a prestação dos serviços (ex: processadores de pagamento).</p>
-        <h3>Segurança dos Dados</h3>
-        <p>Implementamos medidas de segurança robustas para proteger suas informações contra acesso não autorizado, alteração, divulgação ou destruição. Todas as comunicações com nossos bots são criptografadas e monitoramos continuamente nossos sistemas para identificar e mitigar riscos.</p>
-        <h3>Seus Direitos</h3>
-        <p>Você tem o direito de acessar, corrigir ou solicitar a exclusão de seus dados pessoais a qualquer momento. Para exercer esses direitos ou para qualquer dúvida sobre nossa política de privacidade, entre em contato conosco através dos canais de suporte.</p>
+        <p>Na OVER BOT, **sua privacidade é fundamental**. Esta política detalha como coletamos, usamos, protegemos e gerenciamos suas informações pessoais ao utilizar nossos serviços e interagir com nossos bots no Telegram. Nosso compromisso é com a transparência e a segurança dos seus dados.</p>
+        <h3>Coleta de Dados Pessoais</h3>
+        <p>Coletamos informações que você nos fornece diretamente ao criar uma conta, realizar compras ou interagir com nossos bots no Telegram. Isso pode incluir: **seu nome de usuário do Telegram, seu ID de usuário do Telegram, histórico de compras e preferências de contato.** Não solicitamos ou armazenamos dados financeiros sensíveis (como números de cartão de crédito) diretamente em nosso site ou bots; todas as transações são processadas por plataformas de pagamento parceiras seguras.</p>
+        <h3>Uso das Suas Informações</h3>
+        <p>As informações coletadas são utilizadas para as seguintes finalidades:</p>
+        <ul>
+            <li>**Processar e gerenciar suas transações:** Para garantir a entrega automática e instantânea dos itens e acessos VIP que você adquire.</li>
+            <li>**Fornecer e personalizar nossos serviços:** Adaptar a sua experiência, oferecer conteúdos e promoções relevantes com base nas suas preferências.</li>
+            <li>**Melhorar nossos produtos e serviços:** Analisar o uso e o desempenho dos nossos bots e do site para identificar oportunidades de aprimoramento.</li>
+            <li>**Comunicação:** Enviar atualizações sobre produtos, ofertas especiais, notícias da comunidade e informações importantes relacionadas aos seus serviços.</li>
+            <li>**Suporte ao Cliente:** Responder às suas dúvidas, resolver problemas e oferecer assistência técnica eficiente.</li>
+            <li>**Segurança e Conformidade:** Proteger a integridade da nossa plataforma e dos nossos usuários, prevenir fraudes e cumprir com obrigações legais.</li>
+        </ul>
+        <h3>Compartilhamento de Dados</h3>
+        <p>A OVER BOT **não vende, aluga ou troca suas informações pessoais** com terceiros para fins de marketing. Poderemos compartilhar seus dados apenas nas seguintes circunstâncias:</p>
+        <ul>
+            <li>**Com Provedores de Serviço:** Empresas que nos auxiliam na operação do site, processamento de pagamentos, análise de dados ou prestação de suporte. Esses parceiros são obrigados contratualmente a proteger suas informações e utilizá-las apenas para os serviços designados.</li>
+            <li>**Conformidade Legal:** Se exigido por lei, ordem judicial ou em resposta a um processo legal válido para proteger nossos direitos, propriedade ou segurança.</li>
+            <li>**Transferências de Negócios:** Em caso de fusão, aquisição ou venda de ativos, suas informações podem ser transferidas como parte do negócio, com aviso prévio.</li>
+        </ul>
+        <h3>Segurança dos Seus Dados</h3>
+        <p>Implementamos **medidas de segurança técnicas e organizacionais avançadas** para proteger suas informações contra acesso não autorizado, alteração, divulgação ou destruição. Isso inclui criptografia de dados em trânsito e em repouso, firewalls, controles de acesso rigorosos e monitoramento contínuo de nossos sistemas. Embora nos esforcemos para proteger seus dados, nenhuma transmissão pela internet ou sistema de armazenamento eletrônico é 100% segura.</p>
+        <h3>Seus Direitos de Privacidade</h3>
+        <p>De acordo com a Lei Geral de Proteção de Dados (LGPD) e outras regulamentações aplicáveis, você possui os seguintes direitos em relação aos seus dados pessoais:</p>
+        <ul>
+            <li>**Acesso:** Solicitar uma cópia dos dados pessoais que mantemos sobre você.</li>
+            <li>**Retificação:** Solicitar a correção de dados incompletos, inexatos ou desatualizados.</li>
+            <li>**Exclusão:** Solicitar a exclusão dos seus dados pessoais, sob certas condições.</li>
+            <li>**Oposição:** Opor-se ao processamento dos seus dados para determinadas finalidades.</li>
+            <li>**Portabilidade:** Receber seus dados em um formato estruturado, de uso comum e legível por máquina.</li>
+            <li>**Revogação do Consentimento:** Retirar seu consentimento a qualquer momento para o processamento de dados que se baseia nele.</li>
+        </ul>
+        <p>Para exercer qualquer um desses direitos ou para quaisquer dúvidas sobre esta política de privacidade, entre em contato conosco através do nosso **Suporte no Telegram** ou do formulário de contato em nosso site. Nosso objetivo é responder a todas as solicitações de forma rápida e eficiente.</p>
+        <p>Esta Política de Privacidade pode ser atualizada periodicamente. A versão mais recente estará sempre disponível em nosso site.</p>
     </div>
 </div>
 
@@ -2003,24 +2155,37 @@
     <div class="modal-content">
         <button class="modal-close-button">×</button>
         <h2>Termos de Uso</h2>
-        <p>Bem-vindo(a) à OVER BOT! Ao utilizar nossos bots e serviços, você concorda com os seguintes Termos de Uso. Leia-os atentamente.</p>
-        <h3>Aceitação dos Termos</h3>
-        <p>Ao acessar ou usar qualquer um dos nossos bots e serviços, você concorda em estar vinculado(a) por estes Termos de Uso. Se você não concorda com qualquer parte dos termos, não utilize nossos serviços.</p>
-        <h3>Serviços Oferecidos</h3>
-        <p>A OVER BOT oferece acesso a itens digitais exclusivos, conteúdo raro e comunidades VIP por meio de bots na plataforma Telegram. Nossos serviços são fornecidos "como estão", e nos reservamos o direito de modificar, suspender ou descontinuar qualquer aspecto dos serviços a qualquer momento, sem aviso prévio.</p>
-        <h3>Conduta do Usuário</h3>
-        <p>Você concorda em usar nossos serviços apenas para fins lícitos e de uma maneira que não infrinja os direitos de terceiros ou restrinja o uso e o aproveitamento de nossos serviços por qualquer pessoa. É proibido o uso indevido, a revenda não autorizada ou a distribuição do conteúdo adquirido.</p>
-        <h3>Propriedade Intelectual</h3>
-        <p>Todo o conteúdo disponível através dos bots e do site OVER BOT, incluindo textos, gráficos, logos, ícones e software, é de propriedade da OVER BOT ou de seus licenciadores e é protegido por leis de direitos autorais e outras leis de propriedade intelectual.</p>
-        <h3>Limitação de Responsabilidade</h3>
-        <p>A OVER BOT não será responsável por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais decorrentes do uso ou da incapacidade de usar nossos serviços ou do acesso a conteúdos de terceiros.</p>
-        <h3>Alterações nos Termos</h3>
-        <p>Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. Quaisquer alterações entrarão em vigor imediatamente após a publicação no site. É sua responsabilidade revisar periodicamente estes termos. O uso continuado dos serviços após as alterações constitui aceitação dos novos termos.</p>
+        <p>Bem-vindo(a) à OVER BOT! Ao acessar ou utilizar nossos bots e serviços, você concorda em estar legalmente vinculado(a) aos seguintes **Termos de Uso**. Por favor, leia-os atentamente antes de prosseguir. Se você não concorda com qualquer parte destes termos, você não deve utilizar nossos serviços.</p>
+        <h3>1. Aceitação dos Termos</h3>
+        <p>Ao se registrar, acessar ou utilizar qualquer serviço fornecido pela OVER BOT, você declara que leu, compreendeu e concordou em estar sujeito(a) a estes Termos de Uso, bem como à nossa Política de Privacidade. Estes termos constituem um contrato vinculante entre você e a OVER BOT.</p>
+        <h3>2. Serviços Oferecidos</h3>
+        <p>A OVER BOT opera como uma plataforma de venda de **itens digitais exclusivos, acesso a conteúdos raros e participação em comunidades VIP** por meio de bots na plataforma Telegram. Nossos serviços são fornecidos "como estão" e "conforme disponíveis". Reservamo-nos o direito de modificar, suspender, descontinuar ou restringir o acesso a qualquer parte dos serviços a qualquer momento, com ou sem aviso prévio, sem que isso gere qualquer obrigação ou responsabilidade para com você.</p>
+        <h3>3. Conduta do Usuário</h3>
+        <p>Você concorda em utilizar nossos serviços de maneira responsável e ética, em conformidade com todas as leis e regulamentos aplicáveis. É **estritamente proibido**:</p>
+        <ul>
+            <li>Utilizar os serviços para qualquer finalidade ilegal ou não autorizada.</li>
+            <li>Reproduzir, duplicar, copiar, vender, revender ou explorar qualquer parte dos serviços ou conteúdo exclusivo sem nossa permissão expressa por escrito.</li>
+            <li>Engajar-se em qualquer atividade que possa danificar, desabilitar, sobrecarregar ou prejudicar nossos servidores ou redes, ou interferir no uso de qualquer outro usuário dos serviços.</li>
+            <li>Tentar obter acesso não autorizado a contas de outros usuários, sistemas de computador ou redes conectadas aos nossos serviços.</li>
+            <li>Distribuir ou promover material que seja ilegal, difamatório, obsceno, ameaçador, invasivo da privacidade ou de qualquer forma questionável.</li>
+        </ul>
+        <h3>4. Propriedade Intelectual</h3>
+        <p>Todo o conteúdo disponível através dos bots e do site OVER BOT, incluindo, mas não se limitando a textos, gráficos, logotipos, ícones, imagens, clipes de áudio, downloads digitais, compilações de dados e software, é propriedade da OVER BOT ou de seus licenciadores e é protegido por leis brasileiras e internacionais de direitos autorais, marcas registradas e outras leis de propriedade intelectual. A aquisição de um item digital não confere a você a propriedade intelectual do mesmo, apenas o direito de uso conforme a licença específica do produto ou para uso pessoal, a menos que haja um acordo de parceria formalizado para revenda.</p>
+        <h3>5. Transações e Entrega</h3>
+        <p>Todas as transações realizadas através de nossos bots são processadas de forma **segura e criptografada**. A entrega dos itens é **100% automática e instantânea** após a confirmação do pagamento, garantindo acesso imediato ao seu conteúdo. Não nos responsabilizamos por falhas na entrega decorrentes de informações incorretas fornecidas pelo usuário (ex: ID de Telegram inválido).</p>
+        <h3>6. Limitação de Responsabilidade</h3>
+        <p>Na extensão máxima permitida pela lei, a OVER BOT, seus diretores, funcionários, parceiros e agentes não serão responsáveis por quaisquer danos diretos, indiretos, incidentais, especiais, consequenciais ou exemplares, incluindo, mas não se limitando a, danos por lucros cessantes, perda de dados ou outras perdas intangíveis, resultantes do uso ou da incapacidade de usar nossos serviços, acesso não autorizado aos seus dados, declarações ou condutas de terceiros nos serviços, ou qualquer outro assunto relacionado aos serviços.</p>
+        <h3>7. Links de Terceiros</h3>
+        <p>Nossos serviços podem conter links para sites ou serviços de terceiros que não são de propriedade ou controlados pela OVER BOT. Não temos controle sobre e não assumimos responsabilidade pelo conteúdo, políticas de privacidade ou práticas de quaisquer sites ou serviços de terceiros. Você reconhece e concorda que a OVER BOT não será responsável, direta ou indiretamente, por qualquer dano ou perda causada ou alegadamente causada por ou em conexão com o uso ou a confiança em qualquer conteúdo, bens ou serviços disponíveis em ou através de quaisquer sites ou serviços de terceiros.</p>
+        <h3>8. Alterações nos Termos</h3>
+        <p>Reservamo-nos o direito de revisar e modificar estes Termos de Uso a qualquer momento. Quaisquer alterações entrarão em vigor imediatamente após a publicação no site. É sua responsabilidade revisar periodicamente estes termos. O uso continuado dos serviços após a publicação de quaisquer alterações constitui sua aceitação dos termos revisados.</p>
+        <h3>9. Lei Aplicável e Jurisdição</h3>
+        <p>Estes Termos de Uso serão regidos e interpretados de acordo com as leis da República Federativa do Brasil, sem levar em consideração suas disposições sobre conflitos de leis. Você concorda que qualquer ação legal ou equitativa decorrente ou relacionada a estes Termos de Uso será resolvida exclusivamente nos tribunais localizados no Brasil.</p>
     </div>
 </div>
 
 
-<script>
+<script defer>
     document.addEventListener('DOMContentLoaded', function() {
         const openInstructionsModalBtn = document.getElementById('openInstructionsModal');
         const instructionsModal = document.getElementById('instructionsModal');
@@ -2034,7 +2199,6 @@
         const termsOfUseModal = document.getElementById('termsOfUseModal');
         const closeTermsOfUseModalBtn = termsOfUseModal.querySelector('.modal-close-button');
 
-        // New Blog Post Modal Elements
         const blogPostModal = document.getElementById('blogPostModal');
         const closeBlogPostModalBtn = blogPostModal.querySelector('.modal-close-button');
         const blogPostTitle = document.getElementById('blogPostTitle');
@@ -2043,7 +2207,6 @@
         const blogPostDate = document.getElementById('blogPostDate');
         const blogPostCards = document.querySelectorAll('.blog-post-card');
         const openMoreArticlesModalBtn = document.getElementById('openMoreArticlesModal');
-
 
         const body = document.body;
 
@@ -2057,7 +2220,6 @@
             body.classList.remove('no-scroll');
         }
 
-        // Event Listeners for existing modals
         openInstructionsModalBtn.addEventListener('click', () => openModal(instructionsModal));
         closeInstructionsModalBtn.addEventListener('click', () => closeModal(instructionsModal));
         instructionsModal.addEventListener('click', (event) => {
@@ -2065,7 +2227,7 @@
         });
 
         openPrivacyPolicyModalBtn.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default anchor behavior
+            event.preventDefault();
             openModal(privacyPolicyModal);
         });
         closePrivacyPolicyModalBtn.addEventListener('click', () => closeModal(privacyPolicyModal));
@@ -2074,7 +2236,7 @@
         });
 
         openTermsOfUseModalBtn.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default anchor behavior
+            event.preventDefault();
             openModal(termsOfUseModal);
         });
         closeTermsOfUseModalBtn.addEventListener('click', () => closeModal(termsOfUseModal));
@@ -2082,14 +2244,12 @@
             if (event.target === termsOfUseModal) closeModal(termsOfUseModal);
         });
 
-
         // FAQ (Accordion)
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             item.addEventListener('click', () => {
                 const answer = item.querySelector('.faq-answer');
                 const arrow = item.querySelector('.faq-item h3 svg');
-                // Fecha outras respostas abertas
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.querySelector('.faq-answer').classList.remove('open');
@@ -2162,123 +2322,174 @@
             }
         });
 
-        // Chatbot Functionality
+        // Chatbot Functionality (Improved 2025 Style)
         const openChatbotBtn = document.getElementById('openChatbotBtn');
         const chatbotContainer = document.getElementById('chatbotContainer');
         const closeChatbotBtn = document.getElementById('closeChatbotBtn');
         const chatbotMessages = document.getElementById('chatbotMessages');
-        let typingIndicator = document.getElementById('typingIndicator');
-        const endChatButton = document.getElementById('endChatButton');
         const chatbotOptions = document.getElementById('chatbotOptions');
-
         const botAvatarUrl = "https://i.ibb.co/1tkGhqzH/EF04-C6-F5-3-DA5-4-C01-8-FE4-C239-A7-D9-A54-C.gif";
+        let typingIndicator = document.getElementById('typingIndicator'); // Re-initialize as it gets replaced
 
+        // Mapping for FAQ answers (keys are used in data-question attributes)
         const faqAnswers = {
             "entrega": "A entrega na OVER BOT é **100% automática e instantânea**! Assim que seu pagamento é confirmado, você recebe seu item diretamente pelo bot no Telegram. Isso garante que você tenha acesso imediato ao conteúdo, sem esperas ou burocracia. Nosso sistema foi projetado para sua total comodidade e agilidade!",
-            "itens": "Nosso compromisso é com a **qualidade superior** de todos os itens oferecidos. Trabalhamos para que cada produto atenda às suas expectativas, sendo funcional e valioso. Sobre a validade, a maioria dos nossos itens e acessos são **vitalícios**, garantindo que você possa usufruir deles sem prazo de expiração. Em casos específicos onde a validade seja limitada, isso estará claramente indicado na descrição do produto antes da compra.",
+            "qualidade": "Nosso compromisso é com a **qualidade superior** de todos os itens oferecidos. Trabalhamos para que cada produto atenda às suas expectativas, sendo funcional e valioso. Sobre a validade, a maioria dos nossos itens e acessos são **vitalícios**, garantindo que você possa usufruir deles sem prazo de expiração. Em casos específicos onde a validade seja limitada, isso estará claramente indicado na descrição do produto antes da compra.",
             "pagamento": "Na OVER BOT, oferecemos métodos de pagamento modernos e seguros para sua conveniência: aceitamos **PIX** e **Criptomoedas**. O processo é totalmente integrado aos nossos bots do Telegram: após escolher seu item, o bot gerará as informações necessárias para o pagamento. Uma vez que a transação é confirmada em nossa plataforma segura, a entrega do item é feita instantaneamente. Tudo para uma experiência de compra sem preocupações!",
+            "comprar": "Comprar na OVER BOT é super simples e rápido! Basta clicar em qualquer um dos links dos nossos bots de venda no Telegram, como o **BOT 1 - OverStore**. Ao iniciar o bot, você encontrará a opção **'CONTEÚDO EXCLUSIVO'**. Navegue pelos itens disponíveis, escolha o que deseja e siga as instruções para finalizar sua compra. A entrega é **100% automática e imediata** após a confirmação do pagamento!",
             "vip": "Ser um membro VIP da OVER BOT te coloca em um nível acima! Você terá **acesso antecipado** a novos conteúdos e atualizações, **suporte prioritário** para resolver suas dúvidas mais rapidamente, e **promoções e descontos exclusivos** que não estão disponíveis para outros usuários. Além disso, fará parte de uma **comunidade vibrante e engajada** no nosso grupo VIP exclusivo do Telegram. Para aderir, acesse o **BOT 2 - OverStore Premium**.",
-            "seguranca": "Sim, sua segurança é nossa prioridade máxima! Todas as transações na OVER BOT são realizadas com **total segurança e criptografia de ponta** diretamente dentro da plataforma Telegram. Utilizamos métodos de pagamento confiáveis como **PIX e Criptomoedas**, que garantem a proteção dos seus dados financeiros. A entrega dos seus itens é **garantida e automática**, eliminando qualquer risco de falha na entrega.",
-            "software": "Não! A maioria dos nossos itens é projetada para ser **de fácil uso** e não exige softwares complexos ou conhecimentos técnicos avançados. Se algum item específico demandar uma ferramenta adicional, isso estará claramente especificado em sua descrição. Nosso objetivo é proporcionar a melhor experiência, com a máxima praticidade!",
-            "revenda": "A revenda dos itens adquiridos na OVER BOT é **estritamente proibida**, a menos que haja um acordo de parceria formalizado conosco. Nossos conteúdos são exclusivos para uso pessoal, ou conforme licença específica de cada produto. A violação desta política pode, resultar na revogação do acesso aos itens e banimento de nossos serviços. Valorizamos a exclusividade e a integridade de nossa comunidade."
+            "seguranca_bot": "Sim, sua segurança é nossa prioridade máxima! Todas as transações na OVER BOT são realizadas com **total segurança e criptografia de ponta** diretamente dentro da plataforma Telegram. Utilizamos métodos de pagamento confiáveis como **PIX e Criptomoedas**, que garantem a proteção dos seus dados financeiros. A entrega dos seus itens é **garantida e automática**, eliminando qualquer risco de falha na entrega.",
+            "software_itens": "Não! A maioria dos nossos itens é projetada para ser **de fácil uso** e não exige softwares complexos ou conhecimentos técnicos avançados. Se algum item específico demandar uma ferramenta adicional, isso estará claramente especificado em sua descrição. Nosso objetivo é proporcionar a melhor experiência, com a máxima praticidade!",
+            "revenda_itens": "A revenda dos itens adquiridos na OVER BOT é **estritamente proibida**, a menos que haja um acordo de parceria formalizado conosco. Nossos conteúdos são exclusivos para uso pessoal, ou conforme licença específica de cada produto. A violação desta política pode, resultar na revogação do acesso aos itens e banimento de nossos serviços. Valorizamos a exclusividade e a integridade de nossa comunidade.",
+            "contato_geral": "Para outras dúvidas ou se precisar de suporte mais personalizado, você pode nos contatar diretamente pelo nosso bot de suporte no Telegram: [https://t.me/OVERBANSUPORTE_BOT](https://t.me/OVERBANSUPORTE_BOT). Nosso horário de atendimento é de Segunda a Sexta, das 9h às 18h (Horário de Brasília)."
         };
 
-        function addMessage(text, sender, isHtml = false) {
+        // Function to convert simple Markdown to HTML (bold and links)
+        function markdownToHtml(text) {
+            let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Bold
+            html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'); // Links
+            return html;
+        }
+
+        function addMessage(text, sender) {
             const messageDiv = document.createElement('div');
             messageDiv.classList.add(sender === 'bot' ? 'message-bot' : 'message-user');
             if (sender === 'bot') {
                 const botImg = document.createElement('img');
                 botImg.src = botAvatarUrl;
                 botImg.alt = "Avatar do Bot";
-                botImg.style = "width: 2.5rem; height: 2.5rem; border-radius: 50%; vertical-align: middle; margin-right: 0.6rem;";
+                // No need for inline style here, CSS handles it via .message-bot img
                 messageDiv.appendChild(botImg);
             }
-            if (isHtml) {
-                messageDiv.innerHTML += text;
-            } else {
-                messageDiv.textContent += text;
-            }
+            messageDiv.innerHTML += markdownToHtml(text); // Use innerHTML to parse markdown
             chatbotMessages.appendChild(messageDiv);
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }
 
         function showTypingIndicator() {
-            typingIndicator.classList.add('visible');
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            if (!typingIndicator) { // Re-get if it was removed/re-added
+                typingIndicator = document.getElementById('typingIndicator');
+            }
+            if (typingIndicator) { // Check if it exists before adding class
+                typingIndicator.classList.add('visible');
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
         }
 
         function hideTypingIndicator() {
-            typingIndicator.classList.remove('visible');
+            if (typingIndicator) { // Check if it exists before removing class
+                typingIndicator.classList.remove('visible');
+            }
         }
 
         function resetChat() {
             chatbotMessages.innerHTML = `
                 <div class="message-bot">
-                    <img src="${botAvatarUrl}" alt="Avatar do Bot" style="width: 2.5rem; height: 2.5rem; border-radius: 50%; vertical-align: middle; margin-right: 0.6rem;">
+                    <img src="${botAvatarUrl}" alt="Avatar do Bot">
                     Olá! Seja bem-vindo(a) à OVER BOT! Sou seu assistente virtual. Como posso ajudar hoje?
                 </div>
                 <div class="typing-indicator" id="typingIndicator">
-                    <img src="${botAvatarUrl}" alt="Avatar do Bot" style="width: 1.8rem; height: 1.8rem; border-radius: 50%;">
+                    <img src="${botAvatarUrl}" alt="Avatar do Bot">
                     <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
                 </div>
             `;
+            // Re-assign typingIndicator after innerHTML reset
             typingIndicator = document.getElementById('typingIndicator');
-            hideTypingIndicator();
+            hideTypingIndicator(); // Ensure it starts hidden
+            loadInitialOptions(); // Load initial options after reset
         }
 
+        // Define initial and main options for the chatbot
+        const initialOptionsHtml = `
+            <button class="chatbot-option-button" data-question="entrega">Como funciona a entrega dos itens?</button>
+            <button class="chatbot-option-button" data-question="qualidade">Qual a qualidade dos itens e eles são vitalícios?</button>
+            <button class="chatbot-option-button" data-question="pagamento">Quais métodos de pagamento são aceitos?</button>
+            <button class="chatbot-option-button" data-question="comprar">Como faço para comprar itens exclusivos?</button>
+            <button class="chatbot-option-button" data-question="vip">Quais as vantagens de ser um membro VIP?</button>
+            <button class="chatbot-option-button" data-question="seguranca_bot">É seguro comprar pelos BOTs do Telegram?</button>
+            <button class="chatbot-option-button" data-question="software_itens">Preciso de software especial para usar os itens?</button>
+            <button class="chatbot-option-button" data-question="revenda_itens">Posso revender os itens que compro?</button>
+            <button class="chatbot-option-button" data-question="contato_geral">Outras Dúvidas / Falar com Suporte</button>
+            <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">
+                <svg style="width: 1.2rem; height: 1.2rem; fill: currentColor; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M.05 11.23L2.3 12.01l1.52 6.78c.13.57.73.91 1.3.78.36-.08.66-.3.8-.65l2.67-4.04 6.84 5.25c.57.44 1.37.28 1.63-.3.26-.58.1-1.38-.46-1.64l-11.4-8.88-3.34-.84c-.6-.15-1.02-.7-.94-1.3l.97-4.22c.08-.34.3-.64.65-.77.58-.13 1.18.21 1.3.78l1.52 6.78z"/></svg>
+                Falar com Suporte Humano
+            </a>
+            <button class="chatbot-option-button end-chat" id="endChatButton">Encerrar Atendimento</button>
+        `;
+
+        function loadInitialOptions() {
+            chatbotOptions.innerHTML = initialOptionsHtml;
+            // Re-attach event listener for endChatButton since it's recreated
+            document.getElementById('endChatButton').addEventListener('click', handleEndChat);
+        }
+
+        // Handle option clicks
+        chatbotOptions.addEventListener('click', function(event) {
+            if (event.target.classList.contains('chatbot-option-button')) {
+                // If it's a regular question button
+                if (!event.target.classList.contains('end-chat') && !event.target.classList.contains('telegram-link') && event.target.dataset.question) {
+                    const questionKey = event.target.dataset.question;
+                    const questionText = event.target.textContent;
+
+                    addMessage(questionText, 'user');
+                    showTypingIndicator();
+
+                    setTimeout(() => {
+                        hideTypingIndicator();
+                        const answer = faqAnswers[questionKey];
+                        if (answer) {
+                            addMessage(answer, 'bot');
+                        } else {
+                            addMessage("Desculpe, não consegui encontrar uma resposta para essa pergunta. Por favor, tente novamente ou clique em 'Falar com Suporte Humano' para obter ajuda personalizada.", 'bot');
+                        }
+                        // After answering, offer to help further or end chat
+                        setTimeout(() => {
+                            addMessage("Posso ajudar com algo mais?", 'bot');
+                            chatbotOptions.innerHTML = `
+                                <button class="chatbot-option-button" id="backToMainOptions">Voltar para Opções Principais</button>
+                                <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">
+                                    <svg style="width: 1.2rem; height: 1.2rem; fill: currentColor; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M.05 11.23L2.3 12.01l1.52 6.78c.13.57.73.91 1.3.78.36-.08.66-.3.8-.65l2.67-4.04 6.84 5.25c.57.44 1.37.28 1.63-.3.26-.58.1-1.38-.46-1.64l-11.4-8.88-3.34-.84c-.6-.15-1.02-.7-.94-1.3l.97-4.22c.08-.34.3-.64.65-.77.58-.13 1.18.21 1.3.78l1.52 6.78z"/></svg>
+                                    Falar com Suporte Humano
+                                </a>
+                                <button class="chatbot-option-button end-chat" id="endChatButtonAfterAnswer">Encerrar Atendimento</button>
+                            `;
+                            document.getElementById('backToMainOptions').addEventListener('click', loadInitialOptions);
+                            document.getElementById('endChatButtonAfterAnswer').addEventListener('click', handleEndChat);
+                        }, 1000); // Small delay before asking "anything else?"
+                    }, 1500); // Delay for bot's typing
+                } else if (event.target.id === 'endChatButton' || event.target.id === 'endChatButtonAfterAnswer') {
+                    handleEndChat();
+                }
+            }
+        });
+
+        function handleEndChat() {
+            addMessage("Obrigado por entrar em contato com a OVER BOT! Se precisar de algo mais, é só abrir o chat novamente. Tenha um ótimo dia!", 'bot');
+            chatbotOptions.innerHTML = `
+                <button class="chatbot-option-button" id="startNewChatButton">Iniciar Novo Atendimento</button>
+                <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">
+                    <svg style="width: 1.2rem; height: 1.2rem; fill: currentColor; vertical-align: middle; margin-right: 0.5rem;" viewBox="0 0 24 24"><path d="M.05 11.23L2.3 12.01l1.52 6.78c.13.57.73.91 1.3.78.36-.08.66-.3.8-.65l2.67-4.04 6.84 5.25c.57.44 1.37.28 1.63-.3.26-.58.1-1.38-.46-1.64l-11.4-8.88-3.34-.84c-.6-.15-1.02-.7-.94-1.3l.97-4.22c.08-.34.3-.64.65-.77.58-.13 1.18.21 1.3.78l1.52 6.78z"/></svg>
+                    Falar com Suporte Humano
+                </a>
+                <button class="chatbot-option-button end-chat" id="closeChatFinal">Fechar Chat</button>
+            `;
+            document.getElementById('startNewChatButton').addEventListener('click', resetChat); // Renamed to resetChat for clarity
+            document.getElementById('closeChatFinal').addEventListener('click', function() {
+                chatbotContainer.style.display = 'none';
+                body.classList.remove('no-scroll');
+            });
+        }
+
+        // Event listeners for chatbot buttons
         openChatbotBtn.addEventListener('click', function() {
             chatbotContainer.style.display = 'flex';
             body.classList.add('no-scroll');
-            resetChat();
+            resetChat(); // Initialize or reset chat when opened
         });
 
         closeChatbotBtn.addEventListener('click', function() {
             chatbotContainer.style.display = 'none';
             body.classList.remove('no-scroll');
-        });
-
-        chatbotOptions.addEventListener('click', function(event) {
-            if (event.target.classList.contains('chatbot-option-button') && !event.target.classList.contains('end-chat') && !event.target.classList.contains('telegram-link')) {
-                const questionKey = event.target.dataset.question;
-                const questionText = event.target.textContent;
-
-                addMessage(questionText, 'user');
-                showTypingIndicator();
-
-                setTimeout(() => {
-                    hideTypingIndicator();
-                    const answer = faqAnswers[questionKey] || "Desculpe, não consegui encontrar uma resposta para essa pergunta. Por favor, tente novamente ou clique em 'Falar com suporte humano' para obter ajuda personalizada.";
-                    addMessage(answer, 'bot');
-                }, 1500);
-            }
-        });
-
-        endChatButton.addEventListener('click', function() {
-            addMessage("Obrigado por entrar em contato com a OVER BOT! Se precisar de algo mais, é só abrir o chat novamente. Tenha um ótimo dia!", 'bot');
-            chatbotOptions.innerHTML = `
-                <button class="chatbot-option-button" id="startNewChatButton">Iniciar Novo Atendimento</button>
-                <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">Falar com suporte humano (Telegram)</a>
-                <button class="chatbot-option-button end-chat" id="closeChatFinal">Fechar Chat</button>
-            `;
-            document.getElementById('startNewChatButton').addEventListener('click', function() {
-                resetChat();
-                chatbotOptions.innerHTML = `
-                    <button class="chatbot-option-button" data-question="entrega">Como funciona a entrega dos itens?</button>
-                    <button class="chatbot-option-button" data-question="itens">Qual a qualidade dos itens e eles são vitalícios?</button>
-                    <button class="chatbot-option-button" data-question="pagamento">Quais métodos de pagamento são aceitos?</button>
-                    <button class="chatbot-option-button" data-question="vip">Quais as vantagens de ser um membro VIP?</button>
-                    <button class="chatbot-option-button" data-question="seguranca">É seguro comprar pelos BOTs do Telegram?</button>
-                    <button class="chatbot-option-button" data-question="software">Preciso de algum software especial para usar os itens?</button>
-                    <button class="chatbot-option-button" data-question="revenda">Posso revender os itens que compro na OVER BOT?</button>
-                    <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank" rel="noopener noreferrer" class="chatbot-option-button telegram-link">Falar com suporte humano (Telegram)</a>
-                    <button class="chatbot-option-button end-chat" id="endChatButton">Encerrar Atendimento</button>
-                `;
-                document.getElementById('endChatButton').addEventListener('click', arguments.callee);
-            });
-            document.getElementById('closeChatFinal').addEventListener('click', function() {
-                chatbotContainer.style.display = 'none';
-                body.classList.remove('no-scroll');
-            });
         });
 
         // Hamburger menu functionality
@@ -2289,7 +2500,6 @@
             navMenu.classList.toggle('active');
         });
 
-        // Close mobile menu when a link is clicked
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 if (navMenu.classList.contains('active')) {
@@ -2301,12 +2511,11 @@
         // Update YouTube links
         const youtubeIframe = document.querySelector('.video-demonstracao iframe');
         if (youtubeIframe) {
-            // Lembre-se de substituir 'YOUR_YOUTUBE_VIDEO_ID_HERE' pelo ID real do seu vídeo.
-            youtubeIframe.src = `https://www.youtube.com/embed/P-2C8o1t04E`; // Exemplo de URL de incorporação real
+            youtubeIframe.src = `https://www.youtube.com/embed/bBFyezSgatM`; // Specific video ID
         }
-        const youtubeSocialLink = document.querySelector('.creator .social-links-grid a[href*="@apelawar_yt"]');
+        const youtubeSocialLink = document.querySelector('.creator .social-links-grid a[href*="apelawar_yt"]');
         if (youtubeSocialLink) {
-            youtubeSocialLink.href = 'https://www.youtube.com/@apelawar_yt';
+            youtubeSocialLink.href = 'https://www.youtube.com/@apelawar_yt'; // Actual channel URL
         }
 
         // Blog Post Modal Logic
@@ -2359,7 +2568,7 @@
 
         blogPostCards.forEach(card => {
             card.addEventListener('click', function(event) {
-                event.preventDefault(); // Impede que o link vá para '#'
+                event.preventDefault();
 
                 const articleId = this.dataset.articleId;
                 const article = blogArticlesData[articleId];
@@ -2367,11 +2576,10 @@
                 if (article) {
                     blogPostTitle.textContent = article.title;
                     blogPostSubtitle.textContent = article.subtitle;
-                    blogPostContent.innerHTML = article.content; // Use innerHTML para formatar o HTML
+                    blogPostContent.innerHTML = article.content; // Use innerHTML to render markdown correctly
                     blogPostDate.textContent = article.date;
                     openModal(blogPostModal);
                 } else {
-                    // Fallback para artigos não encontrados
                     blogPostTitle.textContent = "Artigo Não Encontrado";
                     blogPostSubtitle.textContent = "";
                     blogPostContent.textContent = "Desculpe, o conteúdo deste artigo não está disponível no momento. Por favor, tente outro ou volte mais tarde!";
@@ -2381,7 +2589,6 @@
             });
         });
 
-        // Event listener for "Ver Mais Artigos" button
         openMoreArticlesModalBtn.addEventListener('click', function(event) {
             event.preventDefault();
             blogPostTitle.textContent = "Descubra Mais Artigos Incríveis!";
